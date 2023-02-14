@@ -13,7 +13,7 @@ export default function Feed() {
                 <Image source={{ uri: item.imgSrc }} style={{ width: 316, height: 316 }} />
                 <View style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', paddingTop: 20 }}>
                     <Text style={styles.text}>{item.title}</Text>
-                    <Text style={{ paddingVertical: 5 }}>{item.album}</Text>
+                    <Text style={{ marginVertical: 5 }}>{item.album}</Text>
                     <Text>{item.artist}</Text>
                 </View>
             </View>
