@@ -3,9 +3,9 @@ import { View, Text, FlatList, Dimensions, Image } from 'react-native';
 import { styles } from './styles';
 
 export default function Feed() {
-    const array = [{ imgSrc: 'https://upload.wikimedia.org/wikipedia/en/a/ad/From_Filthy_Tongue.jpg', title: 'Forever Close My Eyes', album: 'From Filthy Tongue of Gods and Griots', artist: 'Dälek' },
-                { imgSrc: 'https://i1.sndcdn.com/artworks-000231712119-0n7ay3-t500x500.jpg', title: 'mirage', album: 'A Collection of Fleeting Moments and Daydreams', artist: 'Orion Sun' },
-                { imgSrc: 'https://images.genius.com/870909281c7d42a04e9795ac025dc4fb.600x600x1.jpg', title: 'no, no', album: 'weight of the world', artist: 'MIKE' }]
+    const array = [{ id: 0, imgSrc: 'https://upload.wikimedia.org/wikipedia/en/a/ad/From_Filthy_Tongue.jpg', title: 'Forever Close My Eyes', album: 'From Filthy Tongue of Gods and Griots', artist: 'Dälek' },
+                { id: 1, imgSrc: 'https://i1.sndcdn.com/artworks-000231712119-0n7ay3-t500x500.jpg', title: 'mirage', album: 'A Collection of Fleeting Moments and Daydreams', artist: 'Orion Sun' },
+                { id: 2, imgSrc: 'https://images.genius.com/870909281c7d42a04e9795ac025dc4fb.600x600x1.jpg', title: 'no, no', album: 'weight of the world', artist: 'MIKE' }]
 
     const renderItem = ({item, index}) => {
         return (
@@ -26,7 +26,7 @@ export default function Feed() {
                 data={array}
                 renderItem={renderItem}
                 pagingEnabled
-                keyExtractor={(item) => item}
+                keyExtractor={(item) => item.id}
             />
         </View>
   )
