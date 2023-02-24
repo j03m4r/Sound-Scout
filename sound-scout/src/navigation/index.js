@@ -1,18 +1,23 @@
-import { View, Text } from 'react-native'
 import React, { useEffect } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { useSelector, connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { CheckAuthenticated } from '../Redux/Actions/Authentication';
 import Home from './home';
-import Registration from './registration'
+import LoginScreen from '../screens/registration/LoginScreen';
+import RegisterScreen from '../screens/registration/RegisterScreen';
 
 const Stack = createNativeStackNavigator();
 
-function Route({ CheckAuthenticated, isAuthenticated }) {
+function Route() {
+  const dispatch = useDispatch();
+  const { isAuthenticated, authToken } = useSelector((state) => state.Authentication);
+
   useEffect(() => {
-    CheckAuthenticated();
-  })
+    if (authToken) {
+      dispatch(CheckAuthenticated(authToken));
+    }
+  }, [authToken])
 
   return (
     <NavigationContainer>
@@ -21,17 +26,13 @@ function Route({ CheckAuthenticated, isAuthenticated }) {
             <Stack.Screen name="home" component={Home} options={{ headerShown: false }} />
         </Stack.Navigator>
         :
-        <Stack.Navigator initialRouteName="registration">
-            <Stack.Screen name="registration" component={Registration} options={{ headerShown: false }} />
+        <Stack.Navigator initialRouteName="login">
+            <Stack.Screen name="login" component={LoginScreen} options={{ headerShown: false }} />
+			      <Stack.Screen name="register" component={RegisterScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
-      }
-        
+        }
     </NavigationContainer>
   )
 }
 
-const mapStateToProps = state => ({
-  isAuthenticated: state.Authentication.isAuthenticated
-});
-
-export default connect(mapStateToProps, { CheckAuthenticated })(Route);
+export default Route;

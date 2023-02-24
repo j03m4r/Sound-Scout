@@ -2,14 +2,17 @@ import {
     AUTHENTICATION,
     REGISTER_SUCCESS,
     REGISTER_FAIL,
-    LOGIN_SUCCESS,
-    LOGIN_FAIL,
+    TOKEN_SUCCESS,
+    TOKEN_FAIL,
     LOGOUT_SUCCESS,
-    LOGOUT_FAIL
+    LOGOUT_FAIL,
+    LOGIN_SUCCESS,
+    LOGIN_FAIL
 } from '../Types/Authentication';
 
 const initialState = {
-    isAuthenticated: false
+    isAuthenticated: false,
+    authToken: ''
 };
 
 export default (state = initialState, action) => {
@@ -20,6 +23,25 @@ export default (state = initialState, action) => {
                 ...state,
                 isAuthenticated: payload
             }
+        case TOKEN_SUCCESS:
+            return {
+                ...state,
+                authToken: payload
+            }
+        case LOGIN_SUCCESS:
+            return {
+                ...state,
+                isAuthenticated: true
+            }
+        case LOGOUT_SUCCESS:
+            return {
+                ...state,
+                isAuthenticated: false
+            }
+        case LOGIN_SUCCESS:
+        case LOGIN_FAIL:
+        case TOKEN_FAIL:
+        case LOGOUT_FAIL:
         default:
             return state
     }

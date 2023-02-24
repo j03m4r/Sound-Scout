@@ -1,19 +1,18 @@
-from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import csrf_protect
+from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from rest_framework import permissions, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import *
+from .serializers import *
 
 # Create your views here.
 class IsAuthenticated(APIView):
-    permission_classes = (permissions.AllowAny,)
+    permission_classes = (permissions.IsAuthenticated,)
     def get(self, request, format=None):
-        return Response({'isAuthenticated': self.request.user.is_authenticated}, status=status.HTTP_200_OK)
+        return Response({'isAuthenticated': True}, status=status.HTTP_200_OK)
     
-@method_decorator(csrf_protect, name="dispatch")
 class Register(APIView):
     permission_classes = (permissions.AllowAny,)
     def post(self, request, format=None):
@@ -28,13 +27,13 @@ class Register(APIView):
             else:
                 user = User.objects.create_user(username=username, password=password)
                 UserProfile.objects.create(user=user)
+                Token.objects.create(user=user)
                 return Response({'Success': 'User successfully created.'}, status=status.HTTP_201_CREATED)
         else:
             return Response({'Error': 'Passwords do not match.'}, status=status.HTTP_400_BAD_REQUEST)
-        
-@method_decorator(csrf_protect, name="dispatch")
+
 class Login(APIView):
-    permission_classes = (permissions.AllowAny,)
+    permission_classes = (permissions.IsAuthenticated,)
     def post(self, request, format=None):
         data = request.data
         username = data['username']
@@ -50,3 +49,12 @@ class Logout(APIView):
     def post(self, request, format=None):
         logout(request)
         return Response({'Success': 'User logged out.'}, status=status.HTTP_200_OK)
+
+class GetUsers(APIView):
+    permission_classes = (permissions.AllowAny,)
+    
+    def get(self, request, format=None):
+        users = User.objects.all()
+        
+        users = UserSerializer(users, many=True)
+        return Response({'users': users.data}, status=status.HTTP_200_OK)
