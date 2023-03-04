@@ -9,7 +9,7 @@ export default function Feed() {
 
     const renderItem = ({item, index}) => {
         return (
-            <View style={{ flex: 1, height: Dimensions.get('window').height - 114, alignItems: 'center', justifyContent: 'center' }}>
+            <View style={{ flex: 1, height: Dimensions.get('window').height - 114, alignItems: 'center', justifyContent: 'center'}}>
                 <Image source={{ uri: item.imgSrc }} style={{ width: 316, height: 316 }} />
                 <View style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', paddingTop: 20 }}>
                     <Text style={styles.text}>{item.title}</Text>
