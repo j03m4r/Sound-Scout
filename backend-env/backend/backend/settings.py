@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'authentication',
+    'spotify',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',

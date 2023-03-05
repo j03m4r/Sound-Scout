@@ -11,7 +11,8 @@ import {
 } from '../Types/Authentication';
 import axios from 'axios';
 
-export const CheckAuthenticated = (authToken) => async dispatch => {
+export const CheckAuthenticated = () => async (dispatch, getState) => {
+    const { authToken } = getState().Authentication;
     const config = {
         headers: {
             'Accept': 'application/json',
@@ -92,7 +93,8 @@ export const Register = (username, password, re_password) => async dispatch => {
     }
 };
 
-export const Login = (username, password, authToken) => async dispatch => {
+export const Login = (username, password) => async (dispatch, getState) => {
+    const { authToken } = getState().Authentication;
     const config = {
         headers: {
             'Accept': 'application/json',
@@ -104,7 +106,7 @@ export const Login = (username, password, authToken) => async dispatch => {
     const body = JSON.stringify({ username, password });
 
     try {
-        const response = await axios.post(`${process.env.REACT_APP_API_URL}/authentication/login`, body, config);
+        const response = await axios.post(`http://127.0.0.1:8000/authentication/login`, body, config);
         if (response.data.Success) {
             dispatch({
                 type: LOGIN_SUCCESS
@@ -131,7 +133,7 @@ export const Logout = (authToken) => async dispatch => {
     }; 
 
     try {
-        const response = await axios.post(`${process.env.REACT_APP_API_URL}/authentication/logout`, config);
+        const response = await axios.post(`http://127.0.0.1:8000/authentication/logout`, config);
         if (response.data.SUCCESS) {
             dispatch({
                 type: LOGOUT_SUCCESS

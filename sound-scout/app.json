@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "sound-scout",
+    "name": "Sound Scout",
     "slug": "sound-scout",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -34,6 +34,7 @@
         "projectId": "7f9dfa77-7445-4ad0-998c-6d8168c19ea9"
       }
     },
-    "owner": "j03m4r"
+    "owner": "j03m4r",
+    "scheme": "sound-scout"
   }
 }
