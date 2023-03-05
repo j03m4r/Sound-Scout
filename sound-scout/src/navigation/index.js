@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { useDispatch, useSelector } from 'react-redux';
-import { CheckAuthenticated } from '../Redux/Actions/Authentication';
+import { useSelector } from 'react-redux';
 import Home from './home';
 import LoginScreen from '../screens/registration/LoginScreen';
 import RegisterScreen from '../screens/registration/RegisterScreen';
@@ -10,14 +9,7 @@ import RegisterScreen from '../screens/registration/RegisterScreen';
 const Stack = createNativeStackNavigator();
 
 function Route() {
-  const dispatch = useDispatch();
-  const { isAuthenticated, authToken } = useSelector((state) => state.Authentication);
-
-  useEffect(() => {
-    if (authToken) {
-      dispatch(CheckAuthenticated(authToken));
-    }
-  }, [authToken])
+  const { isAuthenticated } = useSelector((state) => state.Authentication);
 
   return (
     <NavigationContainer>

@@ -3,14 +3,17 @@ import {
     CREDS_SUCCESS,
     CREDS_FAIL,
     CODE_SUCCESS,
-    CODE_FAIL 
+    CODE_FAIL,
+    TRACKS_SUCCESS,
+    TRACKS_FAIL
 } from '../Types/Spotify';
 
 const initialState = {
     isAuthenticated: false,
     accessCode: '',
     clientId: '',
-    clientSecret: ''
+    clientSecret: '',
+    topTracks: {}
 };
 
 export default (state = initialState, action) => {
@@ -32,6 +35,12 @@ export default (state = initialState, action) => {
                 ...state,
                 accessCode: payload.code
             }
+        case TRACKS_SUCCESS:
+            return {
+                ...state,
+                topTracks: payload.tracks
+            }
+        case TRACKS_FAIL:
         case CODE_FAIL:
         case CREDS_FAIL:
         default:

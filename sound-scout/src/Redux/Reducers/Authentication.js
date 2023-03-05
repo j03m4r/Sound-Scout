@@ -1,5 +1,4 @@
 import {
-    AUTHENTICATION,
     REGISTER_SUCCESS,
     REGISTER_FAIL,
     TOKEN_SUCCESS,
@@ -18,11 +17,6 @@ const initialState = {
 export default (state = initialState, action) => {
     const { type, payload } = action;
     switch (type) {
-        case AUTHENTICATION:
-            return {
-                ...state,
-                isAuthenticated: payload
-            }
         case TOKEN_SUCCESS:
             return {
                 ...state,
@@ -38,6 +32,8 @@ export default (state = initialState, action) => {
                 ...state,
                 isAuthenticated: false
             }
+        case REGISTER_SUCCESS:
+        case REGISTER_FAIL:
         case LOGIN_SUCCESS:
         case LOGIN_FAIL:
         case TOKEN_FAIL:

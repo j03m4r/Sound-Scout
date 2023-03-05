@@ -6,6 +6,7 @@ app_name='authentication'
 urlpatterns = [
     path('get-auth-token', obtain_auth_token),
     path('get-users', GetUsers.as_view()),
+    path('get-profiles', GetProfiles.as_view()),
     path('is-authenticated', IsAuthenticated.as_view()),
     path('register', Register.as_view()),
     path('login', Login.as_view()),

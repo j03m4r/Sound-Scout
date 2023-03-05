@@ -6,21 +6,10 @@ from django.shortcuts import redirect
 from requests import Request, post, get
 from .credentials import *
 from .utils import *
-
-class GetAuthorizationCode(APIView):
-    def get(self, request, format=None):
-        scopes = ['user-read-playback-state', 'user-modify-playback-state', 'user-read-currently-playing', 'user-read-private',
-                  'user-top-read', 'app-remote-control', 'user-read-playback-position']
-        scopes = " ".join(scopes)
-        
-        url = Request('GET', 'https://accounts.spotify.com/authorize', params={
-            'scope': scopes,
-            'response_type': 'code',
-            'redirect_uri': REDIRECT_URI,
-            'client_id': CLIENT_ID
-        }).prepare().url
-        
-        redirect(url)
+from .models import Track
+from authentication.models import UserProfile
+import requests
+import json
         
 class SpotifyToken(APIView):
     permission_classes = (permissions.IsAuthenticated,)
@@ -46,6 +35,7 @@ class SpotifyToken(APIView):
         return Response({'Success': 'Token successfully acquired', 'code': access_token}, status=status.HTTP_200_OK)
     
 class IsAuthenticated(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
     def get(self, request, format=None):
         is_authenticated = is_spotify_authenticated(request.user)
         return Response({'isAuthenticated': is_authenticated}, status=status.HTTP_200_OK)
@@ -53,4 +43,40 @@ class IsAuthenticated(APIView):
 class GetCredentials(APIView):
     permission_classes = (permissions.IsAuthenticated,)
     def get(self, request, format=None):
-        return Response({ 'clientId': CLIENT_ID, 'clientSecret': CLIENT_SECRET })
+        return Response({'clientId': CLIENT_ID, 'clientSecret': CLIENT_SECRET})
+    
+class GetPersonalTopTracks(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def get(self, request, format=None):
+        profile = UserProfile.objects.get(user=request.user)
+        profile.top_tracks.clear()
+        endpoint = 'top/tracks?time_range=short_term&limit=10'
+        # data = {'limit': 10, 'time_range': 'short_term'}
+        response = execute_spotify_api_request(user=request.user, endpoint=endpoint)
+        
+        top_tracks = []
+        for track in response.get('items'):
+            name = track.get('name')
+            artist = enumerate_artists(track)
+            album = track.get('album').get('name')
+            img_url = track.get('album').get('images')[0].get('url')
+            duration = track.get('duration_ms')
+            progress = track.get('progress_ms')
+            song_id = track.get('id') 
+            
+            
+            top_tracks.append({
+                'name': name,
+                'artist': artist,
+                'album': album,
+                'img_url': img_url,
+                'duration': duration,
+                'progress': progress,
+                'song_id': song_id
+            })
+            if not Track.objects.filter(name=name, artist=artist, album=album).exists():
+                new_track = Track.objects.create(name=name, artist=artist, album=album, img_url=img_url, 
+                                     duration=duration, song_id=song_id)
+                profile.top_tracks.add(new_track)
+                
+        return Response({'Success': 'Top tracks successfully accessed.', 'tracks': top_tracks}, status=status.HTTP_200_OK)

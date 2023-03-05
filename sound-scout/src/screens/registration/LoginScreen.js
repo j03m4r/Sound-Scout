@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, TextInput } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { GetToken } from '../../Redux/Actions/Authentication';
+import { GetSpotifyCode } from '../../Redux/Actions/Spotify';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles';
 import { Link } from '@react-navigation/native';
@@ -9,7 +10,6 @@ function LoginScreen() {
     const dispatch = useDispatch();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const { isAuthenticated, authToken } = useSelector((state) => state.Authentication);
 
     const login = () => {
         dispatch(GetToken(username, password));

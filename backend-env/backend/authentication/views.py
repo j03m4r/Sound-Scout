@@ -52,9 +52,16 @@ class Logout(APIView):
 
 class GetUsers(APIView):
     permission_classes = (permissions.AllowAny,)
-    
     def get(self, request, format=None):
         users = User.objects.all()
         
         users = UserSerializer(users, many=True)
         return Response({'users': users.data}, status=status.HTTP_200_OK)
+
+class GetProfiles(APIView):
+    permission_classes = (permissions.AllowAny,)
+    def get(self, request, format=None):
+        profiles = UserProfile.objects.all()
+        
+        profiles = ProfileSerializer(profiles, many=True)
+        return Response({'profiles': profiles.data}, status=status.HTTP_200_OK)

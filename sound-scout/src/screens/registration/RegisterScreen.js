@@ -15,6 +15,9 @@ function RegisterScreen() {
 	const register = () => {
 		if (password==rePassword) {
 			dispatch(Register(username, password, rePassword))
+			setUsername('');
+			setPassword('');
+			setRePassword('');
 		} else {
 			// dispatch some sort of error to user
 		}

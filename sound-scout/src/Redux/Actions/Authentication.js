@@ -1,5 +1,4 @@
 import {
-    AUTHENTICATION,
     REGISTER_SUCCESS,
     REGISTER_FAIL,
     TOKEN_SUCCESS,
@@ -10,38 +9,7 @@ import {
     LOGOUT_FAIL
 } from '../Types/Authentication';
 import axios from 'axios';
-
-export const CheckAuthenticated = () => async (dispatch, getState) => {
-    const { authToken } = getState().Authentication;
-    const config = {
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Authorization': `Token ${authToken}`
-        }
-    };
-
-    try {
-        const response = await axios.get(`http://127.0.0.1:8000/authentication/is-authenticated`, config);
-        if (response.data.isAuthenticated) {
-            dispatch({
-                type: AUTHENTICATION,
-                payload: response.data.isAuthenticated
-            });
-        } else {
-            dispatch({
-                type: AUTHENTICATION,
-                payload: false
-            });
-        }
-        
-    } catch {
-        dispatch({
-            type: AUTHENTICATION,
-            payload: false
-        });
-    }
-};
+import { CheckSpotifyAuthenticated } from './Spotify';
 
 export const GetToken = (username, password) => async dispatch => {
     const config = {
@@ -109,7 +77,7 @@ export const Login = (username, password) => async (dispatch, getState) => {
         const response = await axios.post(`http://127.0.0.1:8000/authentication/login`, body, config);
         if (response.data.Success) {
             dispatch({
-                type: LOGIN_SUCCESS
+                type: LOGIN_SUCCESS,
             });
         } else {
             dispatch({
@@ -121,6 +89,8 @@ export const Login = (username, password) => async (dispatch, getState) => {
             type: LOGIN_FAIL
         });
     }
+
+    dispatch(CheckSpotifyAuthenticated());
 };
 
 export const Logout = (authToken) => async dispatch => {
