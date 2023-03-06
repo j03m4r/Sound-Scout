@@ -14,4 +14,8 @@ class Track(models.Model):
     img_url = models.CharField(max_length=150)
     duration = models.IntegerField()
     song_id = models.CharField(max_length=150)
+    album_uri = models.CharField(max_length=150, default='')
+    track_number = models.IntegerField(default=0)
+    genres = models.CharField(max_length=200, default='')
+    popularity = models.IntegerField(default=0)
     

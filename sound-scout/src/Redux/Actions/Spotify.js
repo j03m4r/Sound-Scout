@@ -5,7 +5,11 @@ import {
     CODE_SUCCESS,
     CODE_FAIL,
     TRACKS_SUCCESS,
-    TRACKS_FAIL
+    TRACKS_FAIL,
+    PLAY_SUCCESS,
+    PLAY_FAIL,
+    PAUSE_SUCCESS,
+    PAUSE_FAIL
 } from '../Types/Spotify';
 import axios from 'axios';
 import * as AuthSession from 'expo-auth-session';
@@ -100,7 +104,8 @@ export const GetSpotifyCode = () => async (dispatch, getState) => {
                 const response = await axios.post('http://127.0.0.1:8000/spotify/token', body, config);
                 if (response.Success) {
                     dispatch({
-                        type: CODE_SUCCESS
+                        type: CODE_SUCCESS,
+                        payload: response.data
                     });
                 }
             } catch {
@@ -135,3 +140,48 @@ export const GetPersonalTracks = () => async (dispatch, getState)  => {
         });
     }
 }; 
+
+export const PlayTrack = (song_id) => async (dispatch, getState) => {
+    const { authToken } = getState().Authentication; 
+    const config = {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Token ${authToken}`
+        }
+    };
+
+    const body = JSON.stringify({ song_id });
+    try {
+        const response = await axios.post('http://127.0.0.1:8000/spotify/play-track', body, config);
+        dispatch({
+            type: PLAY_SUCCESS,
+            payload: response.data
+        });
+    } catch {
+        dispatch({
+            type: PLAY_FAIL,
+            payload: false
+        });
+    }
+};
+
+export const PauseTrack = () => async (dispatch, getState) => {
+    const { authToken } = getState().Authentication;
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", `Token ${authToken}`);
+    myHeaders.append("Content-Type", "application/json");
+
+    var requestOptions = {
+        method: 'PUT',
+        headers: myHeaders
+    };
+
+    fetch("http://127.0.0.1:8000/spotify/pause-track", requestOptions)
+    .then(response => {
+        dispatch({
+            type: PAUSE_SUCCESS,
+            payload: response
+        })
+    })
+};

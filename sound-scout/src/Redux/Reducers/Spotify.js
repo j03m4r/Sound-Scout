@@ -5,7 +5,11 @@ import {
     CODE_SUCCESS,
     CODE_FAIL,
     TRACKS_SUCCESS,
-    TRACKS_FAIL
+    TRACKS_FAIL,
+    PLAY_SUCCESS,
+    PLAY_FAIL,
+    PAUSE_SUCCESS,
+    PAUSE_FAIL
 } from '../Types/Spotify';
 
 const initialState = {
@@ -13,7 +17,8 @@ const initialState = {
     accessCode: '',
     clientId: '',
     clientSecret: '',
-    topTracks: {}
+    topTracks: [],
+    isPlaying: false
 };
 
 export default (state = initialState, action) => {
@@ -40,6 +45,14 @@ export default (state = initialState, action) => {
                 ...state,
                 topTracks: payload.tracks
             }
+        case PLAY_SUCCESS:
+        case PLAY_FAIL:
+        case PAUSE_SUCCESS:
+            return {
+                ...state,
+                isPlaying: payload.isPlaying
+            }
+        case PAUSE_FAIL:
         case TRACKS_FAIL:
         case CODE_FAIL:
         case CREDS_FAIL:

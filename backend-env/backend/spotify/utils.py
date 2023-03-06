@@ -8,7 +8,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-BASE_URL = "https://api.spotify.com/v1/me/"
+BASE_URL = "https://api.spotify.com/v1/"
 
 def get_user_token(user):
     profile = UserProfile.objects.get(user=user)
@@ -83,8 +83,16 @@ def execute_spotify_api_request(user, endpoint, data = {}, post_=False, put_=Fal
 def enumerate_artists(item):
     artist_string = ''
     for i, artist in enumerate(item.get('artists')):
-            if i > 0:
-                artist_string += ", "
-            name = artist.get('name')
-            artist_string += name
+        if i > 0:
+            artist_string += ", "
+        name = artist.get('name')
+        artist_string += name
     return artist_string
+
+def enumerate_genres(item):
+    genre_string = ''
+    for i, genre in enumerate(item.get('genres')):
+        if i > 0:
+            genre_string += ", "
+        genre_string += genre
+    return genre_string
