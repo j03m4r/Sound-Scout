@@ -12,6 +12,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
     spotify_token = SpotifyTokenSerializer(read_only=True)
     top_tracks = TrackSerializer(read_only=True, many=True)
+    currently_playing = TrackSerializer(read_only=True)
     
     class Meta:
         model = UserProfile

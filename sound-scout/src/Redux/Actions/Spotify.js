@@ -9,10 +9,15 @@ import {
     PLAY_SUCCESS,
     PLAY_FAIL,
     PAUSE_SUCCESS,
-    PAUSE_FAIL
+    PAUSE_FAIL,
+    CURRENT_TRACK_SUCCESS,
+    CURRENT_TRACK_FAIL,
+    REPEAT_TRACK_SUCCESS,
+    REPEAT_TRACK_FAIL
 } from '../Types/Spotify';
 import axios from 'axios';
 import * as AuthSession from 'expo-auth-session';
+import { API_URL } from '../ApiVariables'
 
 export const CheckSpotifyAuthenticated = () => async (dispatch, getState) => {
     const { authToken } = getState().Authentication;
@@ -25,7 +30,7 @@ export const CheckSpotifyAuthenticated = () => async (dispatch, getState) => {
     };
 
     try {
-        const response = await axios.get(`http://127.0.0.1:8000/spotify/is-authenticated`, config);
+        const response = await axios.get(`${API_URL}/spotify/is-authenticated`, config);
         if (response.data.isAuthenticated) {
             dispatch({
                 type: AUTHENTICATION,
@@ -57,7 +62,7 @@ export const GetSpotifyCreds = () => async (dispatch, getState)  => {
     };
 
     try {
-        const response = await axios.get(`http://127.0.0.1:8000/spotify/get-credentials`, config);
+        const response = await axios.get(`${API_URL}/spotify/get-credentials`, config);
         dispatch({
             type: CREDS_SUCCESS,
             payload: response.data
@@ -101,7 +106,7 @@ export const GetSpotifyCode = () => async (dispatch, getState) => {
 
             const body = JSON.stringify({ code });
             try {
-                const response = await axios.post('http://127.0.0.1:8000/spotify/token', body, config);
+                const response = await axios.post(`${API_URL}/spotify/token`, body, config);
                 if (response.Success) {
                     dispatch({
                         type: CODE_SUCCESS,
@@ -129,7 +134,7 @@ export const GetPersonalTracks = () => async (dispatch, getState)  => {
     };
 
     try {
-        const response = await axios.get(`http://127.0.0.1:8000/spotify/get-personal-tracks`, config);
+        const response = await axios.get(`${API_URL}/spotify/get-personal-tracks`, config);
         dispatch({
             type: TRACKS_SUCCESS,
             payload: response.data
@@ -153,7 +158,7 @@ export const PlayTrack = (song_id) => async (dispatch, getState) => {
 
     const body = JSON.stringify({ song_id });
     try {
-        const response = await axios.post('http://127.0.0.1:8000/spotify/play-track', body, config);
+        const response = await axios.post(`${API_URL}/spotify/play-track`, body, config);
         dispatch({
             type: PLAY_SUCCESS,
             payload: response.data
@@ -164,6 +169,7 @@ export const PlayTrack = (song_id) => async (dispatch, getState) => {
             payload: false
         });
     }
+    dispatch(RepeatTrack());
 };
 
 export const PauseTrack = () => async (dispatch, getState) => {
@@ -177,11 +183,67 @@ export const PauseTrack = () => async (dispatch, getState) => {
         headers: myHeaders
     };
 
-    fetch("http://127.0.0.1:8000/spotify/pause-track", requestOptions)
+    fetch(`${API_URL}/spotify/pause-track`, requestOptions)
     .then(response => {
         dispatch({
             type: PAUSE_SUCCESS,
             payload: response
         })
-    })
+    }).catch(() => {
+        dispatch({
+            type: PAUSE_FAIL
+        })
+    });
+};
+
+export const GetCurrentTrack = () => async (dispatch, getState) => {
+    const { authToken } = getState().Authentication;
+    const config = {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Token ${authToken}`
+        }
+    };
+
+    try {
+        const response = await axios.get(`${API_URL}/spotify/get-current-track`, config);
+        if (response.data.progress === null) {
+            dispatch({
+                type: CURRENT_TRACK_FAIL
+            });
+        } else {
+            dispatch({
+                type: CURRENT_TRACK_SUCCESS,
+                payload: response.data
+            });
+        }
+        
+    } catch {
+        dispatch({
+            type: CURRENT_TRACK_FAIL
+        });
+    }
+};
+
+export const RepeatTrack = () => async (dispatch, getState) => {
+    const { authToken } = getState().Authentication;
+    const config = {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Token ${authToken}`
+        }
+    };
+
+    try {
+        const response = await axios.get(`${API_URL}/spotify/repeat-track`, config);
+        dispatch({
+            type: REPEAT_TRACK_SUCCESS
+        });
+    } catch {
+        dispatch({
+            type: REPEAT_TRACK_FAIL
+        });
+    }
 };

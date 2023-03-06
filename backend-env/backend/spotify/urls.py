@@ -9,5 +9,7 @@ urlpatterns = [
     path('get-personal-tracks', GetPersonalTopTracks.as_view()),
     path('tracks', GetTracks.as_view()),
     path('play-track', PlayTrack.as_view()),
-    path('pause-track', PauseTrack.as_view())
+    path('pause-track', PauseTrack.as_view()),
+    path('get-current-track', GetCurrentTrack.as_view()),
+    path('repeat-track', RepeatTrack.as_view())
 ]

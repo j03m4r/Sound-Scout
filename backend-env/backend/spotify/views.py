@@ -126,3 +126,20 @@ class PauseTrack(APIView):
         execute_spotify_api_request(user=request.user, endpoint=endpoint, put_=True)
         
         return Response({'Success': 'Track successfully paused', 'isPlaying': False}, status=status.HTTP_200_OK)
+    
+class GetCurrentTrack(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def get(self, request, format=None):
+        endpoint = 'me/player/currently-playing'
+        response = execute_spotify_api_request(user=request.user, endpoint=endpoint)
+        
+        progress = response.get('progress_ms')
+        return Response({'Success': 'Current track progress successfully returned', 'progress': progress}, status=status.HTTP_200_OK)
+    
+class RepeatTrack(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def get(self, request, format=None):
+        endpoint = 'me/player/repeat?state=track'
+        execute_spotify_api_request(user=request.user, endpoint=endpoint, put_=True)
+        
+        return Response({'Success': 'Track successfully set to repeat'}, status=status.HTTP_200_OK)
