@@ -18,4 +18,5 @@ class Track(models.Model):
     track_number = models.IntegerField(default=0)
     genres = models.CharField(max_length=200, default='')
     popularity = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
     

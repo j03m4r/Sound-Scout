@@ -143,3 +143,11 @@ class RepeatTrack(APIView):
         execute_spotify_api_request(user=request.user, endpoint=endpoint, put_=True)
         
         return Response({'Success': 'Track successfully set to repeat'}, status=status.HTTP_200_OK)
+
+class LikeTrack(APIView):
+    def post(self, request, format=None):
+        song_id = request.data['song_id']
+        track = Track.objects.get(song_id=song_id)
+        track.likes += 1
+        
+        return Response({'Success': 'Track successfully liked'}, status=status.HTTP_200_OK)
