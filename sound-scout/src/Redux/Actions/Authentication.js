@@ -10,6 +10,7 @@ import {
 } from '../Types/Authentication';
 import axios from 'axios';
 import { CheckSpotifyAuthenticated } from './Spotify';
+import { API_URL } from '../ApiVariables';
 
 export const GetToken = (username, password) => async dispatch => {
     const config = {
@@ -21,7 +22,7 @@ export const GetToken = (username, password) => async dispatch => {
 
     const body = JSON.stringify({ username, password });
     try {
-        const response = await axios.post(`http://127.0.0.1:8000/authentication/get-auth-token`, body, config);
+        const response = await axios.post(`${API_URL}/authentication/get-auth-token`, body, config);
         dispatch({
             type: TOKEN_SUCCESS,
             payload: response.data.token
@@ -44,7 +45,7 @@ export const Register = (username, password, re_password) => async dispatch => {
 
     const body = JSON.stringify({ username, password, re_password });
     try {
-        const response = await axios.post(`http://127.0.0.1:8000/authentication/register`, body, config);
+        const response = await axios.post(`${API_URL}/authentication/register`, body, config);
         if (response.data.Success) {
             dispatch({
                 type: REGISTER_SUCCESS,
@@ -74,7 +75,7 @@ export const Login = (username, password) => async (dispatch, getState) => {
     const body = JSON.stringify({ username, password });
 
     try {
-        const response = await axios.post(`http://127.0.0.1:8000/authentication/login`, body, config);
+        const response = await axios.post(`${API_URL}/authentication/login`, body, config);
         if (response.data.Success) {
             dispatch({
                 type: LOGIN_SUCCESS,
@@ -103,7 +104,7 @@ export const Logout = (authToken) => async dispatch => {
     }; 
 
     try {
-        const response = await axios.post(`http://127.0.0.1:8000/authentication/logout`, config);
+        const response = await axios.post(`${API_URL}/authentication/logout`, config);
         if (response.data.SUCCESS) {
             dispatch({
                 type: LOGOUT_SUCCESS

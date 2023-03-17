@@ -2,13 +2,12 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework import status, permissions
 from rest_framework.views import APIView
-from django.shortcuts import redirect
-from requests import Request, post, get
+from requests import post
 from .credentials import *
 from .utils import *
 from .models import Track
 from authentication.models import UserProfile
-import requests
+from .serializers import *
 import json
         
 class SpotifyToken(APIView):
@@ -50,8 +49,7 @@ class GetPersonalTopTracks(APIView):
     def get(self, request, format=None):
         profile = UserProfile.objects.get(user=request.user)
         profile.top_tracks.clear()
-        endpoint = 'top/tracks?time_range=short_term&limit=10'
-        # data = {'limit': 10, 'time_range': 'short_term'}
+        endpoint = 'me/top/tracks?time_range=short_term&limit=10'
         response = execute_spotify_api_request(user=request.user, endpoint=endpoint)
         
         top_tracks = []
@@ -63,7 +61,13 @@ class GetPersonalTopTracks(APIView):
             duration = track.get('duration_ms')
             progress = track.get('progress_ms')
             song_id = track.get('id') 
+            track_number = track.get('track_number')
+            album_uri = track.get('album').get('uri')
+            popularity = track.get('popularity')
+            artist_id = track.get('artists')[0].get('id')
             
+            endpoint = f'artists/{artist_id}'
+            response = execute_spotify_api_request(user=request.user, endpoint=endpoint)
             
             top_tracks.append({
                 'name': name,
@@ -74,9 +78,89 @@ class GetPersonalTopTracks(APIView):
                 'progress': progress,
                 'song_id': song_id
             })
-            if not Track.objects.filter(name=name, artist=artist, album=album).exists():
+            
+            new_track = Track.objects.filter(song_id=song_id)
+            genres = response.get('genres')
+            if not new_track.exists():
                 new_track = Track.objects.create(name=name, artist=artist, album=album, img_url=img_url, 
-                                     duration=duration, song_id=song_id)
+                                     duration=duration, song_id=song_id, track_number=track_number, album_uri=album_uri,
+                                     popularity=popularity)
                 profile.top_tracks.add(new_track)
+                for genre in genres:
+                    genre_model = Genre.objects.filter(name=genre)
+                    if not genre_model.exists():
+                        genre = Genre.objects.create(name=genre)
+                        new_track.genres.add(genre)
+                    else:
+                        new_track.genres.add(genre_model[0])
+            else:
+                profile.top_tracks.add(new_track[0])
+                for genre in genres:
+                    genre_model = Genre.objects.filter(name=genre)
+                    if not genre_model.exists():
+                        genre = Genre.objects.create(name=genre)
+                        new_track[0].genres.add(genre)
+                    else:
+                        new_track[0].genres.add(genre_model[0])
                 
         return Response({'Success': 'Top tracks successfully accessed.', 'tracks': top_tracks}, status=status.HTTP_200_OK)
+    
+class GetTracks(APIView):
+    permission_classes = (permissions.AllowAny,)
+    def get(self, request, format=None):
+        tracks = Track.objects.all()
+        tracks = TrackSerializer(tracks, many=True)
+        return Response({'tracks': tracks.data}, status=status.HTTP_200_OK)
+    
+class PlayTrack(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def post(self, request, format=None):
+        profile = UserProfile.objects.get(user=request.user)
+        song_id = request.data['song_id']
+        endpoint = 'me/player/play'
+        
+        if song_id != '':
+            track = Track.objects.get(song_id=song_id)
+            data = json.dumps({'context_uri': track.album_uri, 'offset': {'position': track.track_number-1}, 'position_ms': 0})
+            response = execute_spotify_api_request(user=request.user, endpoint=endpoint, data=data, put_=True)
+            profile.currently_playing = track
+            profile.save(update_fields=['currently_playing'])
+        else:
+            response = execute_spotify_api_request(user=request.user, endpoint=endpoint, put_=True)
+        
+        if response:
+            return Response({'Success': 'Track successfully played', 'isPlaying': response}, status=status.HTTP_200_OK)
+        return Response({'Error': 'Something went wrong with the request', 'isPlaying': False}, status=status.HTTP_400_BAD_REQUEST)
+    
+class PauseTrack(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def put(self, request, format=None):
+        endpoint = 'me/player/pause'
+        execute_spotify_api_request(user=request.user, endpoint=endpoint, put_=True)
+        
+        return Response({'Success': 'Track successfully paused', 'isPlaying': False}, status=status.HTTP_200_OK)
+    
+class GetCurrentTrack(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def get(self, request, format=None):
+        endpoint = 'me/player/currently-playing'
+        response = execute_spotify_api_request(user=request.user, endpoint=endpoint)
+        
+        progress = response.get('progress_ms')
+        return Response({'Success': 'Current track progress successfully returned', 'progress': progress}, status=status.HTTP_200_OK)
+    
+class RepeatTrack(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def get(self, request, format=None):
+        endpoint = 'me/player/repeat?state=track'
+        execute_spotify_api_request(user=request.user, endpoint=endpoint, put_=True)
+        
+        return Response({'Success': 'Track successfully set to repeat'}, status=status.HTTP_200_OK)
+
+class LikeTrack(APIView):
+    def post(self, request, format=None):
+        song_id = request.data['song_id']
+        track = Track.objects.get(song_id=song_id)
+        track.likes += 1
+        
+        return Response({'Success': 'Track successfully liked'}, status=status.HTTP_200_OK)

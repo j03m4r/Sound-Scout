@@ -4,11 +4,12 @@ from django.utils import timezone
 from datetime import timedelta
 from requests import post, get, put
 from .credentials import *
+from .models import Genre
 import logging
 
 logger = logging.getLogger(__name__)
 
-BASE_URL = "https://api.spotify.com/v1/me/"
+BASE_URL = "https://api.spotify.com/v1/"
 
 def get_user_token(user):
     profile = UserProfile.objects.get(user=user)
@@ -72,8 +73,9 @@ def execute_spotify_api_request(user, endpoint, data = {}, post_=False, put_=Fal
         response = put(BASE_URL + endpoint, data=data, headers=header)
     else:
         response = get(BASE_URL + endpoint, data=data, headers=header)
-
-    response = get(BASE_URL + endpoint, {}, headers=header)
+    
+    # response = get(BASE_URL + endpoint, {}, hea÷ders=header)
+    # logger.warn(response)
     
     try:
         return response.json()
@@ -83,8 +85,8 @@ def execute_spotify_api_request(user, endpoint, data = {}, post_=False, put_=Fal
 def enumerate_artists(item):
     artist_string = ''
     for i, artist in enumerate(item.get('artists')):
-            if i > 0:
-                artist_string += ", "
-            name = artist.get('name')
-            artist_string += name
+        if i > 0:
+            artist_string += ", "
+        name = artist.get('name')
+        artist_string += name
     return artist_string

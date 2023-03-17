@@ -7,6 +7,9 @@ class SpotifyToken(models.Model):
     expires_in = models.DateTimeField()
     token_type = models.CharField(max_length=50)
 
+class Genre(models.Model):
+    name = models.CharField(max_length=100)
+
 class Track(models.Model):
     name = models.CharField(max_length=150)
     artist = models.CharField(max_length=150)
@@ -14,4 +17,8 @@ class Track(models.Model):
     img_url = models.CharField(max_length=150)
     duration = models.IntegerField()
     song_id = models.CharField(max_length=150)
-    
+    album_uri = models.CharField(max_length=150, default='')
+    track_number = models.IntegerField(default=0)
+    genres = models.ManyToManyField(Genre)
+    popularity = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
