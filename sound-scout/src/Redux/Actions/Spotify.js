@@ -13,7 +13,11 @@ import {
     CURRENT_TRACK_SUCCESS,
     CURRENT_TRACK_FAIL,
     REPEAT_TRACK_SUCCESS,
-    REPEAT_TRACK_FAIL
+    REPEAT_TRACK_FAIL,
+    GET_GENRES_SUCCESS,
+    GET_GENRES_FAIL,
+    LIKE_TRACK_SUCCESS,
+    LIKE_TRACK_FAIL
 } from '../Types/Spotify';
 import axios from 'axios';
 import * as AuthSession from 'expo-auth-session';
@@ -244,6 +248,51 @@ export const RepeatTrack = () => async (dispatch, getState) => {
     } catch {
         dispatch({
             type: REPEAT_TRACK_FAIL
+        });
+    }
+};
+
+export const GetGenres = () => async dispatch => {
+    const config = {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    }
+
+    try {
+        const response = await axios.get(`${API_URL}/spotify/genres`, config);
+        const genres = response.data.genres.map((genre) => Object.assign(genre, {key: genre.id, value: genre.name}));
+        dispatch({
+            type: GET_GENRES_SUCCESS,
+            payload: genres
+        });
+    } catch {
+        dispatch({
+            type: GET_GENRES_FAIL
+        });
+    }
+};
+
+export const LikeTrack = (song_id) => async (dispatch, getState) => {
+    const { authToken } = getState().Authentication;
+    const config = {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Token ${authToken}`
+        }
+    };
+
+    const body = JSON.stringify({ song_id });
+    try {
+        const response = await axios.post(`${API_URL}/spotify/like-track`, body, config);
+        dispatch({
+            type: LIKE_TRACK_SUCCESS,
+        });
+    } catch {
+        dispatch({
+            type: LIKE_TRACK_FAIL,
         });
     }
 };

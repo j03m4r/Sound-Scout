@@ -6,7 +6,7 @@ import styles from './styles';
 import { Link } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons'
 
-function RegisterScreen() {
+function RegisterScreen({ navigation }) {
 	const dispatch = useDispatch();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -18,6 +18,7 @@ function RegisterScreen() {
 			setUsername('');
 			setPassword('');
 			setRePassword('');
+			navigation.navigate('login');
 		} else {
 			// dispatch some sort of error to user
 		}

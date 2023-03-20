@@ -1075,3 +1075,5 @@ Unauthorized: /spotify/is-authenticated
 <Response [200]>
 <Response [204]>
 <Response [200]>
+Unauthorized: /authentication/login
+Unauthorized: /spotify/is-authenticated

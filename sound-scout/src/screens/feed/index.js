@@ -2,16 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, Dimensions, Image, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 import { useDispatch, useSelector } from 'react-redux';
-import { GetSpotifyCode, PlayTrack, PauseTrack, GetCurrentTrack } from '../../Redux/Actions/Spotify';
+import { GetSpotifyCode, PlayTrack, PauseTrack, GetCurrentTrack, GetGenres } from '../../Redux/Actions/Spotify';
 import * as Progress from 'react-native-progress';
+import Modal from "react-native-modal";
+import DiscoveryConfiguration from '../../components/DiscoveryConfiguration';
+import GestureRecognizer from 'rn-swipe-gestures';
 
 export default function Feed() {
     const dispatch = useDispatch();
+    const [modalIsVisible, setModalIsVisible] = useState(false);
     const { topTracks, isPlaying, progress } = useSelector((state) => state.Spotify);
 
     useEffect(() => {
         if (topTracks.length === 0) {
             dispatch(GetSpotifyCode());
+            dispatch(GetGenres());
         } else {
             dispatch(PlayTrack(topTracks[0].song_id));
         }
@@ -60,7 +65,29 @@ export default function Feed() {
     };
 
     return (
-        <View style={styles.container}>
+        <GestureRecognizer
+            onSwipeRight={() => setModalIsVisible(true)}
+            onSwipeLeft={() => setModalIsVisible(false)}
+            config={{
+                detectSwipeUp: false,
+                detectSwipeDown: false,
+            }}
+            style={ styles.container }
+        >
+            <Modal
+                isVisible={modalIsVisible}
+                onBackdropPress={() => setModalIsVisible(!modalIsVisible)} 
+                onSwipeComplete={() => setModalIsVisible(!modalIsVisible)} 
+                animationIn="slideInLeft"
+                animationOut="slideOutLeft"
+                swipeDirection="left"
+                useNativeDriver
+                hideModalContentWhileAnimating
+                propagateSwipe
+                style={{ margin: 0, width: Dimensions.get('window').width * .75 }}
+            >
+                <DiscoveryConfiguration />
+            </Modal>
             {topTracks ? 
                 <FlatList
                     showsVerticalScrollIndicator={false}
@@ -73,6 +100,6 @@ export default function Feed() {
                 :
                 <text>Could Not Load Top Tracks :/</text>
             }
-        </View>
-  )
+        </GestureRecognizer>
+    )
 }

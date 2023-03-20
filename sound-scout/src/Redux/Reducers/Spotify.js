@@ -13,7 +13,11 @@ import {
     CURRENT_TRACK_SUCCESS,
     CURRENT_TRACK_FAIL,
     REPEAT_TRACK_SUCCESS,
-    REPEAT_TRACK_FAIL
+    REPEAT_TRACK_FAIL,
+    GET_GENRES_SUCCESS,
+    GET_GENRES_FAIL,
+    LIKE_TRACK_SUCCESS,
+    LIKE_TRACK_FAIL
 } from '../Types/Spotify';
 
 const initialState = {
@@ -22,6 +26,7 @@ const initialState = {
     clientId: '',
     clientSecret: '',
     topTracks: [],
+    genres: [],
     isPlaying: false,
     progress: 0
 };
@@ -67,6 +72,14 @@ export default (state = initialState, action) => {
                 ...state,
                 progress: payload.progress
             }
+        case GET_GENRES_SUCCESS:
+            return {
+                ...state,
+                genres: payload
+            }
+        case LIKE_TRACK_SUCCESS:
+        case LIKE_TRACK_FAIL:
+        case GET_GENRES_FAIL:
         case REPEAT_TRACK_SUCCESS:
         case REPEAT_TRACK_FAIL:
         case CURRENT_TRACK_FAIL:

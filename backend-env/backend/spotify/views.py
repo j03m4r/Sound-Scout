@@ -158,9 +158,21 @@ class RepeatTrack(APIView):
         return Response({'Success': 'Track successfully set to repeat'}, status=status.HTTP_200_OK)
 
 class LikeTrack(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
     def post(self, request, format=None):
         song_id = request.data['song_id']
         track = Track.objects.get(song_id=song_id)
         track.likes += 1
         
         return Response({'Success': 'Track successfully liked'}, status=status.HTTP_200_OK)
+
+class GetGenres(APIView):
+    permission_classes = (permissions.AllowAny,)
+    def get(self, request, format=None):
+        genres = Genre.objects.all()
+        genres = GenreSerializer(genres, many=True)
+        return Response({'genres': genres.data}, status=status.HTTP_200_OK)
+    
+class GetDiscoveryTracks(APIView):
+    def get(self, request, format=None):
+        pass

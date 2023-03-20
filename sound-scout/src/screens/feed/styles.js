@@ -2,7 +2,8 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        paddingHorizontal: 35
     },
     text: {
         fontSize: 30,
@@ -16,6 +17,5 @@ export const styles = StyleSheet.create({
     },
     subContainer: {
         alignSelf: 'flex-start',
-        marginLeft: 37
     }
 })
