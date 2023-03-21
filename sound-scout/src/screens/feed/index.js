@@ -11,7 +11,7 @@ import GestureRecognizer from 'rn-swipe-gestures';
 export default function Feed() {
     const dispatch = useDispatch();
     const [modalIsVisible, setModalIsVisible] = useState(false);
-    const { topTracks, isPlaying, progress } = useSelector((state) => state.Spotify);
+    const { topTracks, isPlaying, progress, tracks } = useSelector((state) => state.Spotify);
 
     useEffect(() => {
         if (topTracks.length === 0) {
@@ -89,6 +89,16 @@ export default function Feed() {
                 <DiscoveryConfiguration />
             </Modal>
             {topTracks ? 
+                tracks.length > 0 ? 
+                <FlatList
+                    showsVerticalScrollIndicator={false}
+                    data={tracks}
+                    renderItem={renderItem}
+                    pagingEnabled
+                    keyExtractor={(item) => item.song_id}
+                    onMomentumScrollEnd={onScrollEnd}
+                /> 
+                :
                 <FlatList
                     showsVerticalScrollIndicator={false}
                     data={topTracks}

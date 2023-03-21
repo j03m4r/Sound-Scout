@@ -4,6 +4,7 @@ import { SelectList } from 'react-native-dropdown-select-list';
 import { useDispatch, useSelector } from 'react-redux';
 import { styles } from './styles';
 import VerticalSlider from 'rn-vertical-slider';
+import { DiscoverTracks } from '../Redux/Actions/Spotify';
 
 export default function DiscoveryConfiguration() {
     const dispatch = useDispatch();
@@ -12,8 +13,8 @@ export default function DiscoveryConfiguration() {
     const { genres } = useSelector((state) => state.Spotify);
 
     const onPress = () => {
-        
-    }
+        dispatch(DiscoverTracks(genre));
+    };
 
     return (
         <SafeAreaView style={styles.safeAreaView}>

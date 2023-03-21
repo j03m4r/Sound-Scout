@@ -17,7 +17,9 @@ import {
     GET_GENRES_SUCCESS,
     GET_GENRES_FAIL,
     LIKE_TRACK_SUCCESS,
-    LIKE_TRACK_FAIL
+    LIKE_TRACK_FAIL,
+    DISCOVER_TRACKS_SUCCESS,
+    DISCOVER_TRACKS_FAIL
 } from '../Types/Spotify';
 
 const initialState = {
@@ -26,6 +28,7 @@ const initialState = {
     clientId: '',
     clientSecret: '',
     topTracks: [],
+    tracks: [],
     genres: [],
     isPlaying: false,
     progress: 0
@@ -77,6 +80,12 @@ export default (state = initialState, action) => {
                 ...state,
                 genres: payload
             }
+        case DISCOVER_TRACKS_SUCCESS:
+            return {
+                ...state,
+                tracks: payload.tracks
+            }
+        case DISCOVER_TRACKS_FAIL:
         case LIKE_TRACK_SUCCESS:
         case LIKE_TRACK_FAIL:
         case GET_GENRES_FAIL:

@@ -9,7 +9,8 @@ from .models import Track
 from authentication.models import UserProfile
 from .serializers import *
 import json
-        
+
+logger = logging.getLogger(__name__)
 class SpotifyToken(APIView):
     permission_classes = (permissions.IsAuthenticated,)
     def post(self, request, format=None):
@@ -174,5 +175,10 @@ class GetGenres(APIView):
         return Response({'genres': genres.data}, status=status.HTTP_200_OK)
     
 class GetDiscoveryTracks(APIView):
-    def get(self, request, format=None):
-        pass
+    permission_classes = (permissions.IsAuthenticated,)
+    def post(self, request, format=None):
+        genre = request.data['genre']
+        genre = Genre.objects.get(name=genre)
+        tracks = genre.track_set.all().order_by('-likes')
+        tracks = TrackSerializer(tracks, many=True)
+        return Response({'tracks': tracks.data}, status=status.HTTP_200_OK)

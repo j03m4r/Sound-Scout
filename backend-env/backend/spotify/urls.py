@@ -13,5 +13,6 @@ urlpatterns = [
     path('pause-track', PauseTrack.as_view()),
     path('get-current-track', GetCurrentTrack.as_view()),
     path('repeat-track', RepeatTrack.as_view()),
-    path('like-track', LikeTrack.as_view())
+    path('like-track', LikeTrack.as_view()),
+    path('discover-tracks', GetDiscoveryTracks.as_view())
 ]

@@ -17,7 +17,9 @@ import {
     GET_GENRES_SUCCESS,
     GET_GENRES_FAIL,
     LIKE_TRACK_SUCCESS,
-    LIKE_TRACK_FAIL
+    LIKE_TRACK_FAIL,
+    DISCOVER_TRACKS_SUCCESS,
+    DISCOVER_TRACKS_FAIL
 } from '../Types/Spotify';
 import axios from 'axios';
 import * as AuthSession from 'expo-auth-session';
@@ -293,6 +295,30 @@ export const LikeTrack = (song_id) => async (dispatch, getState) => {
     } catch {
         dispatch({
             type: LIKE_TRACK_FAIL,
+        });
+    }
+};
+
+export const DiscoverTracks = (genre) => async (dispatch, getState) => {
+    const { authToken } = getState().Authentication;
+    const config = {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Token ${authToken}` 
+        }
+    };
+
+    const body = JSON.stringify({ genre });
+    try {
+        const response = await axios.post(`${API_URL}/spotify/discover-tracks`, body, config);
+        dispatch({
+            type: DISCOVER_TRACKS_SUCCESS,
+            payload: response.data
+        });
+    } catch {
+        dispatch({
+            type: DISCOVER_TRACKS_FAIL
         });
     }
 };
