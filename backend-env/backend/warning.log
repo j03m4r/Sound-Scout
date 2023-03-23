@@ -1251,3 +1251,1128 @@ Traceback (most recent call last):
     genre = request.data['genre']
             ~~~~~~~~~~~~^^^^^^^^^
 KeyError: 'genre'
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ManyRelatedManager is not JSON serializable
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ManyRelatedManager is not JSON serializable
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ManyRelatedManager is not JSON serializable
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ManyRelatedManager is not JSON serializable
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ManyRelatedManager is not JSON serializable
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 183, in post
+    track = Track.objects.get(song_id=song_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Track.DoesNotExist: Track matching query does not exist.
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 183, in post
+    track = Track.objects.get(song_id=song_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Track.DoesNotExist: Track matching query does not exist.
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 171, in post
+    track = Track.objects.get(song_id=song_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Track.DoesNotExist: Track matching query does not exist.
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 172, in post
+    if not like in track.likes:
+           ^^^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'ManyRelatedManager' is not iterable
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 175, in post
+    if not like in likes:
+           ^^^^^^^^^^^^^
+TypeError: argument of type 'ListSerializer' is not iterable
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'LikeSerializer'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 176, in post
+    track.likes.add(like)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1323, in _add_items
+    target_ids = self._get_target_ids(target_field_name, objs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1257, in _get_target_ids
+    target_ids.add(target_field.get_prep_value(obj))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related.py", line 1150, in get_prep_value
+    return self.target_field.get_prep_value(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got LikeSerializer(<Like: Like object (1)>):
+    id = IntegerField(label='ID', read_only=True)
+    user = PrimaryKeyRelatedField(queryset=User.objects.all(), validators=[<UniqueValidator(queryset=Like.objects.all())>]).
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'LikeSerializer'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 176, in post
+    track.likes.add(like)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1323, in _add_items
+    target_ids = self._get_target_ids(target_field_name, objs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1257, in _get_target_ids
+    target_ids.add(target_field.get_prep_value(obj))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related.py", line 1150, in get_prep_value
+    return self.target_field.get_prep_value(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got LikeSerializer(<Like: Like object (1)>):
+    id = IntegerField(label='ID', read_only=True)
+    user = PrimaryKeyRelatedField(queryset=User.objects.all(), validators=[<UniqueValidator(queryset=Like.objects.all())>]).
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'LikeSerializer'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 176, in post
+    track.likes.add(like)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1323, in _add_items
+    target_ids = self._get_target_ids(target_field_name, objs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1257, in _get_target_ids
+    target_ids.add(target_field.get_prep_value(obj))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related.py", line 1150, in get_prep_value
+    return self.target_field.get_prep_value(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got LikeSerializer(<Like: Like object (1)>):
+    id = IntegerField(label='ID', read_only=True)
+    user = UserSerializer(read_only=True):
+        id = IntegerField(label='ID', read_only=True)
+        username = CharField(help_text='Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.', max_length=150, validators=[<django.contrib.auth.validators.UnicodeUsernameValidator object>, <UniqueValidator(queryset=User.objects.all())>]).
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'LikeSerializer'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 176, in post
+    track.likes.add(like)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1323, in _add_items
+    target_ids = self._get_target_ids(target_field_name, objs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1257, in _get_target_ids
+    target_ids.add(target_field.get_prep_value(obj))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related.py", line 1150, in get_prep_value
+    return self.target_field.get_prep_value(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got LikeSerializer(<Like: Like object (1)>):
+    id = IntegerField(label='ID', read_only=True)
+    user = UserSerializer(read_only=True):
+        id = IntegerField(label='ID', read_only=True)
+        username = CharField(help_text='Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.', max_length=150, validators=[<django.contrib.auth.validators.UnicodeUsernameValidator object>, <UniqueValidator(queryset=User.objects.all())>]).
+LikeSerializer(<Like: Like object (1)>):
+    id = IntegerField(label='ID', read_only=True)
+    user = UserSerializer(read_only=True):
+        id = IntegerField(label='ID', read_only=True)
+        username = CharField(help_text='Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.', max_length=150, validators=[<django.contrib.auth.validators.UnicodeUsernameValidator object>, <UniqueValidator(queryset=User.objects.all())>])
+LikeSerializer(<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x10d8bb150>, many=True):
+    id = IntegerField(label='ID', read_only=True)
+    user = UserSerializer(read_only=True):
+        id = IntegerField(label='ID', read_only=True)
+        username = CharField(help_text='Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.', max_length=150, validators=[<django.contrib.auth.validators.UnicodeUsernameValidator object>, <UniqueValidator(queryset=User.objects.all())>])
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'LikeSerializer'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 179, in post
+    track.likes.add(like)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1323, in _add_items
+    target_ids = self._get_target_ids(target_field_name, objs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1257, in _get_target_ids
+    target_ids.add(target_field.get_prep_value(obj))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related.py", line 1150, in get_prep_value
+    return self.target_field.get_prep_value(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got LikeSerializer(<Like: Like object (1)>):
+    id = IntegerField(label='ID', read_only=True)
+    user = UserSerializer(read_only=True):
+        id = IntegerField(label='ID', read_only=True)
+        username = CharField(help_text='Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.', max_length=150, validators=[<django.contrib.auth.validators.UnicodeUsernameValidator object>, <UniqueValidator(queryset=User.objects.all())>]).
+LikeSerializer(<Like: Like object (1)>):
+    id = IntegerField(label='ID', read_only=True)
+    user = UserSerializer(read_only=True):
+        id = IntegerField(label='ID', read_only=True)
+        username = CharField(help_text='Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.', max_length=150, validators=[<django.contrib.auth.validators.UnicodeUsernameValidator object>, <UniqueValidator(queryset=User.objects.all())>])
+LikeSerializer(<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x10d8efd50>, many=True):
+    id = IntegerField(label='ID', read_only=True)
+    user = UserSerializer(read_only=True):
+        id = IntegerField(label='ID', read_only=True)
+        username = CharField(help_text='Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.', max_length=150, validators=[<django.contrib.auth.validators.UnicodeUsernameValidator object>, <UniqueValidator(queryset=User.objects.all())>])
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'LikeSerializer'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 179, in post
+    track.likes.add(like)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1323, in _add_items
+    target_ids = self._get_target_ids(target_field_name, objs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1257, in _get_target_ids
+    target_ids.add(target_field.get_prep_value(obj))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related.py", line 1150, in get_prep_value
+    return self.target_field.get_prep_value(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got LikeSerializer(<Like: Like object (1)>):
+    id = IntegerField(label='ID', read_only=True)
+    user = UserSerializer(read_only=True):
+        id = IntegerField(label='ID', read_only=True)
+        username = CharField(help_text='Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.', max_length=150, validators=[<django.contrib.auth.validators.UnicodeUsernameValidator object>, <UniqueValidator(queryset=User.objects.all())>]).
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 172, in post
+    serialized_like = LikeSerializer(like).data[0]
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+KeyError: 0
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 175, in post
+    if not serialized_like in likes:
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'ManyRelatedManager' is not iterable
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 175, in post
+    if not serialized_like in likes:
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'ListSerializer' is not iterable
+Internal Server Error: /spotify/like-track
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 177, in post
+    track.save(update_fields=['likes'])
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 795, in save
+    raise ValueError(
+ValueError: The following fields do not exist in this model, are m2m fields, or are non-concrete fields: likes
+Internal Server Error: /spotify/get-personal-tracks
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 90, in get
+    for genre in genres:
+TypeError: 'NoneType' object is not iterable
+Internal Server Error: /spotify/get-personal-tracks
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 99, in get
+    for genre in genres:
+TypeError: 'NoneType' object is not iterable
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 187, in post
+    track = Track.objects.get(song_id=song_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Track.DoesNotExist: Track matching query does not exist.
+Internal Server Error: /spotify/get-personal-tracks
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 57, in get
+    for track in response.get('items'):
+TypeError: 'NoneType' object is not iterable
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 187, in post
+    track = Track.objects.get(song_id=song_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Track.DoesNotExist: Track matching query does not exist.
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 187, in post
+    track = Track.objects.get(song_id=song_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Track.DoesNotExist: Track matching query does not exist.
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 187, in post
+    track = Track.objects.get(song_id=song_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Track.DoesNotExist: Track matching query does not exist.
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 187, in post
+    track = Track.objects.get(song_id=song_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Track.DoesNotExist: Track matching query does not exist.
+Bad Request: /authentication/get-auth-token
+Unauthorized: /authentication/login
+Unauthorized: /spotify/is-authenticated
+Bad Request: /authentication/get-auth-token
+Unauthorized: /authentication/login
+Unauthorized: /spotify/is-authenticated
+Bad Request: /authentication/get-auth-token
+Unauthorized: /authentication/login
+Unauthorized: /spotify/is-authenticated
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 187, in post
+    track = Track.objects.get(song_id=song_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Track.DoesNotExist: Track matching query does not exist.
+Internal Server Error: /spotify/get-track-likes
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 187, in post
+    track = Track.objects.get(song_id=song_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Track.DoesNotExist: Track matching query does not exist.
+Internal Server Error: /spotify/discover-tracks
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 203, in post
+    genre = Genre.objects.get(name=genre)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Genre.DoesNotExist: Genre matching query does not exist.

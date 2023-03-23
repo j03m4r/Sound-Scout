@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class SpotifyToken(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
@@ -9,6 +10,9 @@ class SpotifyToken(models.Model):
 
 class Genre(models.Model):
     name = models.CharField(max_length=100)
+
+class Like(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 class Track(models.Model):
     name = models.CharField(max_length=150)
@@ -21,4 +25,4 @@ class Track(models.Model):
     track_number = models.IntegerField(default=0)
     genres = models.ManyToManyField(Genre)
     popularity = models.IntegerField(default=0)
-    likes = models.IntegerField(default=0)
+    likes = models.ManyToManyField(Like)

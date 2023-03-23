@@ -35,4 +35,14 @@ export const styles = StyleSheet.create({
     buttonText: {
         fontWeight: 'bold',
     },
+    likeText: {
+        fontWeight: 'bold',
+        textAlign: 'center',
+        fontSize: 80
+    },
+    likeNumber: {
+        fontWeight: 'bold',
+        textAlign: 'center',
+        fontSize: 15
+    }
 });

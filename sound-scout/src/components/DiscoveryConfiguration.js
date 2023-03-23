@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, SafeAreaView, TouchableOpacity, Dimensions } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import { SelectList } from 'react-native-dropdown-select-list';
 import { useDispatch, useSelector } from 'react-redux';
 import { styles } from './styles';
 import VerticalSlider from 'rn-vertical-slider';
 import { DiscoverTracks } from '../Redux/Actions/Spotify';
 
-export default function DiscoveryConfiguration() {
+export default function DiscoveryConfiguration({ scrollToTopCallback}) {
     const dispatch = useDispatch();
     const [genre, setGenre] = useState('');
     const [popularity, setPopularity] = useState(0);
@@ -14,6 +14,8 @@ export default function DiscoveryConfiguration() {
 
     const onPress = () => {
         dispatch(DiscoverTracks(genre));
+        scrollToTopCallback();
+        setGenre('');
     };
 
     return (

@@ -19,7 +19,9 @@ import {
     LIKE_TRACK_SUCCESS,
     LIKE_TRACK_FAIL,
     DISCOVER_TRACKS_SUCCESS,
-    DISCOVER_TRACKS_FAIL
+    DISCOVER_TRACKS_FAIL,
+    GET_TRACK_LIKES_SUCCESS,
+    GET_TRACK_LIKES_FAIL
 } from '../Types/Spotify';
 
 const initialState = {
@@ -31,7 +33,8 @@ const initialState = {
     tracks: [],
     genres: [],
     isPlaying: false,
-    progress: 0
+    progress: 0,
+    trackLikes: [],
 };
 
 export default (state = initialState, action) => {
@@ -56,7 +59,8 @@ export default (state = initialState, action) => {
         case TRACKS_SUCCESS:
             return {
                 ...state,
-                topTracks: payload.tracks
+                topTracks: payload.tracks,
+                tracks: payload.tracks
             }
         case PLAY_SUCCESS:
             return {
@@ -85,8 +89,14 @@ export default (state = initialState, action) => {
                 ...state,
                 tracks: payload.tracks
             }
-        case DISCOVER_TRACKS_FAIL:
         case LIKE_TRACK_SUCCESS:
+        case GET_TRACK_LIKES_SUCCESS:
+            return {
+                ...state,
+                trackLikes: payload.likes
+            }
+        case GET_TRACK_LIKES_FAIL:
+        case DISCOVER_TRACKS_FAIL:
         case LIKE_TRACK_FAIL:
         case GET_GENRES_FAIL:
         case REPEAT_TRACK_SUCCESS:

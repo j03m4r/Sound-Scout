@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import SpotifyToken, Track, Genre
+from .models import SpotifyToken, Track, Genre, Like
 
 class SpotifyTokenSerializer(serializers.ModelSerializer):
     class Meta:
@@ -11,8 +11,15 @@ class GenreSerializer(serializers.ModelSerializer):
         model = Genre
         fields = '__all__'
 
+class LikeSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Like
+        fields = '__all__'
+
 class TrackSerializer(serializers.ModelSerializer):
     genres = GenreSerializer(many=True, read_only=True)
+    
     class Meta:
         model = Track
         fields = '__all__'

@@ -161,11 +161,33 @@ class RepeatTrack(APIView):
 class LikeTrack(APIView):
     permission_classes = (permissions.IsAuthenticated,)
     def post(self, request, format=None):
+        like = Like.objects.filter(user=request.user)
+        if like.exists():
+            like = like[0]
+        else:
+            like = Like.objects.create(user=request.user)
+        
         song_id = request.data['song_id']
         track = Track.objects.get(song_id=song_id)
-        track.likes += 1
         
-        return Response({'Success': 'Track successfully liked'}, status=status.HTTP_200_OK)
+        try:
+            track.likes.add(like)
+            track.save(update_fields=['likes'])
+        except:
+            likes = LikeSerializer(track.likes, many=True)
+            return Response({'Error': 'Track has already been liked by this user', 'likes': likes.data})
+        
+        likes = LikeSerializer(track.likes, many=True)
+        return Response({'Success': 'Track successfully liked', 'likes': likes.data}, status=status.HTTP_200_OK)
+
+class GetTrackLikes(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def post(self, request, format=None):
+        song_id = request.data['song_id']
+        track = Track.objects.get(song_id=song_id)
+
+        likes = LikeSerializer(track.likes, many=True)
+        return Response({'likes': likes.data}, status=status.HTTP_200_OK)
 
 class GetGenres(APIView):
     permission_classes = (permissions.AllowAny,)
@@ -178,7 +200,10 @@ class GetDiscoveryTracks(APIView):
     permission_classes = (permissions.IsAuthenticated,)
     def post(self, request, format=None):
         genre = request.data['genre']
-        genre = Genre.objects.get(name=genre)
-        tracks = genre.track_set.all().order_by('-likes')
+        if genre == '':
+            tracks = Track.objects.all().order_by('?')[0:20]
+        else:
+            genre = Genre.objects.get(name=genre)
+            tracks = genre.track_set.all().order_by('-likes')
         tracks = TrackSerializer(tracks, many=True)
         return Response({'tracks': tracks.data}, status=status.HTTP_200_OK)

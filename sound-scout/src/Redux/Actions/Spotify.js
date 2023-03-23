@@ -19,7 +19,9 @@ import {
     LIKE_TRACK_SUCCESS,
     LIKE_TRACK_FAIL,
     DISCOVER_TRACKS_SUCCESS,
-    DISCOVER_TRACKS_FAIL
+    DISCOVER_TRACKS_FAIL,
+    GET_TRACK_LIKES_SUCCESS,
+    GET_TRACK_LIKES_FAIL
 } from '../Types/Spotify';
 import axios from 'axios';
 import * as AuthSession from 'expo-auth-session';
@@ -176,6 +178,7 @@ export const PlayTrack = (song_id) => async (dispatch, getState) => {
         });
     }
     dispatch(RepeatTrack());
+    dispatch(GetTrackLikes(song_id));
 };
 
 export const PauseTrack = () => async (dispatch, getState) => {
@@ -291,6 +294,7 @@ export const LikeTrack = (song_id) => async (dispatch, getState) => {
         const response = await axios.post(`${API_URL}/spotify/like-track`, body, config);
         dispatch({
             type: LIKE_TRACK_SUCCESS,
+            payload: response.data
         });
     } catch {
         dispatch({
@@ -319,6 +323,30 @@ export const DiscoverTracks = (genre) => async (dispatch, getState) => {
     } catch {
         dispatch({
             type: DISCOVER_TRACKS_FAIL
+        });
+    }
+};
+
+export const GetTrackLikes = (song_id) => async (dispatch, getState) => {
+    const { authToken } = getState().Authentication;
+    const config = {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Token ${authToken}`
+        }
+    };
+
+    const body = JSON.stringify({ song_id });
+    try {
+        const response = await axios.post(`${API_URL}/spotify/get-track-likes`, body, config);
+        dispatch({
+            type: GET_TRACK_LIKES_SUCCESS,
+            payload: response.data
+        });
+    } catch {
+        dispatch({
+            type: GET_TRACK_LIKES_FAIL,
         });
     }
 };
