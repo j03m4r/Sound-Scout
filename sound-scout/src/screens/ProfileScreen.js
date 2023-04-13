@@ -1,6 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from "react-native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { useSelector } from 'react-redux';
+import Animated, { useSharedValue, useAnimatedStyle, withTiming, Easing } from 'react-native-reanimated';
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { useState } from "react";
 
 const profilePic = "../../assets/profile-pic.jpg";
 const s1 = "../../assets/p1.jpg";
@@ -8,6 +12,16 @@ const s2 = "../../assets/p2.jpeg";
 const s3 = "../../assets/p3.jpg";
 
 export default function App() {
+    const { topTracks } = useSelector((state) => state.Spotify);
+    const [rotated, setRotated] = useState(false);
+    const rotationToDo = useSharedValue(0);
+
+    const animatedStyles = useAnimatedStyle(() => {
+        return {
+          transform: [{ rotateY: `${rotationToDo.value}deg` }],
+        };
+      });
+
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -49,16 +63,40 @@ export default function App() {
                 </View>
 
                 <View style={{ marginTop: 32 }}>
-                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                        <View style={styles.mediaImageContainer}>
-                            <Image source={require(s1)} style={styles.image} resizeMode="cover"></Image>
-                        </View>
-                        <View style={styles.mediaImageContainer}>
-                            <Image source={require(s2)} style={styles.image} resizeMode="cover"></Image>
-                        </View>
-                        <View style={styles.mediaImageContainer}>
-                            <Image source={require(s3)} style={styles.image} resizeMode="cover"></Image>
-                        </View>
+                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{ padding: 10 }}>
+                        { topTracks ? 
+                            topTracks.map((track) => 
+                                <TouchableOpacity key={track.song_id} style={[styles.mediaImageContainer, styles.shadowProp]} activeOpacity={1} 
+                                    onPress={() => 
+                                        {rotationToDo.value===180 ?
+                                            (
+                                                rotationToDo.value = withTiming(0, {duration: 1000, easing: Easing.out(Easing.exp)}),
+                                                setRotated(false)
+                                            )
+                                        :
+                                            (
+                                                rotationToDo.value = withTiming(180, {duration: 1000, easing: Easing.out(Easing.exp)}),
+                                                setRotated(true)
+                                            )
+                                        }
+                                    }>
+                                    {rotated ? 
+                                        <Animated.View style={[animatedStyles, styles.rotatedView, styles.songDiscContainer]}>
+                                            <Text style={[styles.text, styles.rotatedView]}>{track.name}</Text>
+                                            <Text style={[{ marginVertical: 5 }, styles.rotatedView]}>{track.artist}</Text>
+                                            <Text style={styles.rotatedView}>{track.album}</Text>
+                                        </Animated.View>
+                                    :
+                                        <Animated.Image source={{ uri: track.img_url }} style={[styles.image, animatedStyles]} resizeMode="cover"/>
+                                    }
+                                    
+                                </TouchableOpacity>
+                            )
+                        :
+                            <View>
+                                <Text>No Tracks!</Text>
+                            </View>
+                        }
                     </ScrollView>
                 </View>
                 <Text style={[styles.subText, styles.recent]}>Recent Activity</Text>
@@ -100,7 +138,8 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         height: undefined,
-        width: undefined
+        width: undefined,
+        borderRadius: 12
     },
     titleBar: {
         flexDirection: "row",
@@ -166,11 +205,11 @@ const styles = StyleSheet.create({
         flex: 1
     },
     mediaImageContainer: {
-        width: 180,
+        width: 200,
         height: 200,
         borderRadius: 12,
-        overflow: "hidden",
-        marginHorizontal: 10
+        overflow: "visible",
+        marginHorizontal: 20
     },
     mediaCount: {
         backgroundColor: "#41444B",
@@ -207,5 +246,27 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         marginTop: 3,
         marginRight: 20
-    }
+    },
+    text: {
+        fontSize: 30,
+        fontWeight: 'bold'
+    },
+    songDiscContainer: {
+        display: 'flex', 
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#fff',
+        borderRadius: 12,
+        borderColor: 'black',
+        height: '100%'
+    },
+    rotatedView: {
+        transform: [{ rotateY: '180deg' }]
+    },
+    shadowProp: {
+        shadowColor: '#171717',
+        shadowOffset: {width: -2, height: 3},
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
+    },
 });

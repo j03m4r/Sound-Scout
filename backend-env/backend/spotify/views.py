@@ -9,6 +9,7 @@ from .models import Track
 from authentication.models import UserProfile
 from .serializers import *
 import json
+from django.db.models import Count
 
 logger = logging.getLogger(__name__)
 class SpotifyToken(APIView):
@@ -192,7 +193,8 @@ class GetTrackLikes(APIView):
 class GetGenres(APIView):
     permission_classes = (permissions.AllowAny,)
     def get(self, request, format=None):
-        genres = Genre.objects.all()
+        genres = Genre.objects.all().annotate(num_tracks = Count('track')).order_by('-num_tracks')
+        # genres = Genre.objects.order_by('?')[:25]
         genres = GenreSerializer(genres, many=True)
         return Response({'genres': genres.data}, status=status.HTTP_200_OK)
     
