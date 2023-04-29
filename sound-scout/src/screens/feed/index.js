@@ -1,44 +1,62 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { View, Text, FlatList, Dimensions, Image, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 import { useDispatch, useSelector } from 'react-redux';
-import { GetSpotifyCode, PlayTrack, PauseTrack, GetCurrentTrack, GetGenres, GetTrackLikes } from '../../Redux/Actions/Spotify';
+import { GetSpotifyCode, PlayTrack, PauseTrack, GetGenres } from '../../Redux/Actions/Spotify';
 import * as Progress from 'react-native-progress';
 import Modal from "react-native-modal";
 import DiscoveryConfiguration from '../../components/DiscoveryConfiguration';
 import GestureRecognizer from 'rn-swipe-gestures';
 import TrackStatistics from '../../components/TrackStatistics';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Feed() {
+    const navigation = useNavigation();
     const dispatch = useDispatch();
     const trackRef = React.useRef();
     const [modalOneIsVisible, setModalOneIsVisible] = useState(false);
     const [modalTwoIsVisible, setModalTwoIsVisible] = useState(false);
     const [song_id, setSong_id] = useState(0);
-    const { topTracks, isPlaying, progress, tracks } = useSelector((state) => state.Spotify);
+    const [progress, setProgress] = useState(0);
+    const [startTime, setStartTime] = useState(0);
+    const { topTracks, isPlaying, tracks } = useSelector((state) => state.Spotify);
 
     useEffect(() => {
         if (topTracks.length === 0) {
             dispatch(GetSpotifyCode());
             dispatch(GetGenres());
         } else {
-            dispatch(PlayTrack(topTracks[0].song_id));
-            dispatch(GetTrackLikes(topTracks[0].song_id))
+            // dispatch(PlayTrack(topTracks[0].song_id));
+            setStartTime(Date.now());
             setSong_id(topTracks[0].song_id);
         }
     }, [topTracks,]);
 
     useEffect(() => {
+        let interval;
         if (isPlaying) {
-            dispatch(GetCurrentTrack());
+            interval = setInterval(() => {
+                setProgress(Date.now() - startTime);
+            }, 100);
+        } else {
+            clearInterval(interval);
         }
+        return () => clearInterval(interval);
     });
+
+    useEffect(() => {
+        const unsubscribe = navigation.addListener('blur', () => {
+            setModalTwoIsVisible(false);
+        });
+
+        return unsubscribe;
+    }, [navigation])
 
     const renderItem = ({ item }) => {
         return (
             <View style={{ flex: 1, height: Dimensions.get('window').height - 114, alignItems: 'center', justifyContent: 'center' }}>
                 <TouchableOpacity onPress={handleClick}>
-                    <Image source={{ uri: item.img_url }} style={{ width: 316, height: 316 }} />
+                    <Image source={{ uri: item.img_url }} style={{ width: 316, height: 316 }}/>
                 </TouchableOpacity>
                 <Progress.Bar progress={progress/item.duration} width={316} borderWidth={0} borderRadius={0} color='black'/>
                 <View style={styles.subContainer}>
@@ -51,12 +69,13 @@ export default function Feed() {
             </View>
         )
     };
+    const memoizedValue = useMemo(() => renderItem, [tracks]);
 
     const handleClick = () => {
         if (isPlaying) {
-            dispatch(PauseTrack());
+            // dispatch(PauseTrack());
         } else {
-            dispatch(PlayTrack(''));
+            // dispatch(PlayTrack(''));
         }
     };
 
@@ -65,11 +84,10 @@ export default function Feed() {
         let viewSize = e.nativeEvent.layoutMeasurement;
         let pageNum = Math.floor(contentOffset.y / viewSize.height);
         if (tracks.length > 0) {
-            dispatch(PlayTrack(tracks[pageNum].song_id));
-        } else if (topTracks) {
-            dispatch(PlayTrack(topTracks[pageNum].song_id));
+            // dispatch(PlayTrack(tracks[pageNum].song_id));
         }
-        setSong_id(tracks[pageNum].song_id)
+        setStartTime(Date.now());
+        setSong_id(tracks[pageNum].song_id);
     };
 
     const scrollToTop = () => {
@@ -126,23 +144,12 @@ export default function Feed() {
             >
                 <TrackStatistics song_id={song_id}/>
             </Modal>
-            {topTracks ? 
-                tracks.length > 0 ? 
+            {tracks ? 
                 <FlatList
                     ref={trackRef}
                     showsVerticalScrollIndicator={false}
                     data={tracks}
-                    renderItem={renderItem}
-                    pagingEnabled
-                    keyExtractor={(item) => item.song_id}
-                    onMomentumScrollEnd={onScrollEnd}
-                /> 
-                :
-                <FlatList
-                    ref={trackRef}
-                    showsVerticalScrollIndicator={false}
-                    data={topTracks}
-                    renderItem={renderItem}
+                    renderItem={memoizedValue}
                     pagingEnabled
                     keyExtractor={(item) => item.song_id}
                     onMomentumScrollEnd={onScrollEnd}

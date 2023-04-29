@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+# from authentication.models import UserProfile
 
 class SpotifyToken(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
@@ -26,3 +27,4 @@ class Track(models.Model):
     genres = models.ManyToManyField(Genre)
     popularity = models.IntegerField(default=0)
     likes = models.ManyToManyField(Like)
+    listeners = models.ManyToManyField(to='authentication.UserProfile', related_name='listened_to_tracks')

@@ -1,50 +1,72 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from "react-native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, Easing } from 'react-native-reanimated';
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useState } from "react";
+import { GetProfile } from "../../Redux/Actions/Profile";
 
-const profilePic = "../../assets/profile-pic.jpg";
-const s1 = "../../assets/p1.jpg";
-const s2 = "../../assets/p2.jpeg";
-const s3 = "../../assets/p3.jpg";
+const defaultPic = "../../../assets/profile-pic.jpg";
 
-export default function App() {
+export default function App({ route }) {
     const { topTracks } = useSelector((state) => state.Spotify);
+    const { following, followers, profilePic } = useSelector((state) => state.Profile);
+    const { username } = useSelector((state) => state.Authentication);
     const [rotated, setRotated] = useState(false);
     const rotationToDo = useSharedValue(0);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(GetProfile(route.params.username))
+    }, []);
 
     const animatedStyles = useAnimatedStyle(() => {
         return {
           transform: [{ rotateY: `${rotationToDo.value}deg` }],
         };
-      });
+    });
 
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
-                <View style={styles.titleBar}>
-                    <Ionicons name="ios-arrow-back" size={24} color="#52575D"></Ionicons>
-                </View>
+                {route.params.username !== username ? 
+                    <View style={styles.titleBar}>
+                        <Ionicons name="ios-arrow-back" size={24} color="#52575D"></Ionicons>
+                    </View>
+                    :
+                    <View style={styles.personalDms}>
+                        <MaterialIcons name="chat" size={18} color="#DFD8C8"></MaterialIcons>
+                    </View>
+                }
 
                 <View style={{ alignSelf: "center" }}>
                     <View style={styles.profileImage}>
-                        <Image source={require(profilePic)} style={styles.image} resizeMode="center"></Image>
+                        {profilePic ? 
+                            <Image  source={{ uri: profilePic}} style={styles.image}></Image>
+                        :
+                            <Image source={require(defaultPic)} style={styles.image}></Image>
+                        }
                     </View>
-                    <View style={styles.dm}>
-                        <MaterialIcons name="chat" size={18} color="#DFD8C8"></MaterialIcons>
-                    </View>
-                    <View style={styles.active}></View>
-                    <View style={styles.add}>
-                        <Ionicons name="ios-add" size={48} color="#DFD8C8" style={{ marginTop: 6, marginLeft: 2 }}></Ionicons>
-                    </View>
+                    {route.params.username !== username ?
+                        <View>
+                            <View style={styles.dm}>
+                                <MaterialIcons name="chat" size={18} color="#DFD8C8"></MaterialIcons>
+                            </View>
+                            <View style={styles.active}></View>
+                            <TouchableOpacity style={styles.add}>
+                                <Ionicons name="ios-add" size={48} color="#DFD8C8" style={{ marginTop: 6, marginLeft: 2 }}></Ionicons>
+                            </TouchableOpacity>
+                        </View>
+                        :
+                        <View></View>
+                    }
+                    
                 </View>
 
                 <View style={styles.infoContainer}>
-                    <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>Music Listener</Text>
-                    <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Clairo&#39;s first male stan</Text>
+                    <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>{route.params.username}</Text>
+                    {/* <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Clairo&#39;s first male stan</Text> */}
                 </View>
 
                 <View style={styles.statsContainer}>
@@ -53,11 +75,19 @@ export default function App() {
                         <Text style={[styles.text, styles.subText]}>spotlights</Text>
                     </View>
                     <View style={[styles.statsBox, { borderColor: "#DFD8C8", borderLeftWidth: 1, borderRightWidth: 1 }]}>
-                        <Text style={[styles.text, { fontSize: 24 }]}>312</Text>
+                        {followers ? 
+                        <Text style={[styles.text, { fontSize: 24 }]}>{followers.length}</Text>
+                        :
+                        <Text style={[styles.text, { fontSize: 24 }]}>0</Text>
+                        }
                         <Text style={[styles.text, styles.subText]}>Followers</Text>
                     </View>
                     <View style={styles.statsBox}>
-                        <Text style={[styles.text, { fontSize: 24 }]}>163</Text>
+                        {following ? 
+                        <Text style={[styles.text, { fontSize: 24 }]}>{following.length}</Text>
+                        :
+                        <Text style={[styles.text, { fontSize: 24 }]}>0</Text>
+                        }
                         <Text style={[styles.text, styles.subText]}>Following</Text>
                     </View>
                 </View>
@@ -70,7 +100,7 @@ export default function App() {
                                     onPress={() => 
                                         {rotationToDo.value===180 ?
                                             (
-                                                rotationToDo.value = withTiming(0, {duration: 1000, easing: Easing.out(Easing.exp)}),
+                                                rotationToDo.value = withTiming(360, {duration: 1000, easing: Easing.out(Easing.exp)}),
                                                 setRotated(false)
                                             )
                                         :
@@ -269,4 +299,17 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 4,
     },
+    personalDms: {
+        alignSelf: 'flex-end',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginVertical: 24,
+        marginHorizontal: 30,
+        backgroundColor: "#41444B",
+        width: 40,
+        height: 40,
+        borderRadius: 20,
+        alignItems: "center",
+        justifyContent: "center" 
+    }
 });

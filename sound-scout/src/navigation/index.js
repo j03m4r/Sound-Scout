@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux';
 import Home from './home';
 import LoginScreen from '../screens/registration/LoginScreen';
 import RegisterScreen from '../screens/registration/RegisterScreen';
+import ProfileListScreen from '../screens/network/ProfileListScreen';
+import OtherProfileScreen from '../screens/network/OtherProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +18,8 @@ function Route() {
       {isAuthenticated ? 
         <Stack.Navigator initialRouteName="home">
             <Stack.Screen name="home" component={Home} options={{ headerShown: false }} />
+            <Stack.Screen name="list" component={ProfileListScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="otherProfile" component={OtherProfileScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
         :
         <Stack.Navigator initialRouteName="login">

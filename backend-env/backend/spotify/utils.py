@@ -75,7 +75,7 @@ def execute_spotify_api_request(user, endpoint, data = {}, post_=False, put_=Fal
         response = get(BASE_URL + endpoint, data=data, headers=header)
     
     # response = get(BASE_URL + endpoint, {}, hea÷ders=header)
-    # logger.warn(response)
+    logger.warn(response)
     
     try:
         return response.json()

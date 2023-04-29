@@ -79,6 +79,7 @@ export const Login = (username, password) => async (dispatch, getState) => {
         if (response.data.Success) {
             dispatch({
                 type: LOGIN_SUCCESS,
+                payload: username
             });
         } else {
             dispatch({

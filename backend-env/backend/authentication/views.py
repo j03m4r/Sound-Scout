@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 from rest_framework import permissions, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.decorators import action
+from rest_framework.parsers import FileUploadParser
 from .models import *
 from .serializers import *
 
@@ -65,3 +67,51 @@ class GetProfiles(APIView):
         
         profiles = ProfileSerializer(profiles, many=True)
         return Response({'profiles': profiles.data}, status=status.HTTP_200_OK)
+
+class Follow(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def post(self, request, format=None):
+        data = self.request.data
+        otherUser = User.objects.filter(username=data['username'])[0]
+        user = self.request.user
+        
+        profile = UserProfile.objects.filter(user=user)[0]
+        other_profile = UserProfile.objects.filter(user=otherUser)[0]
+        
+        profile.following.add(otherUser)
+        other_profile.followers.add(user)
+
+        profile = ProfileSerializer(profile)
+        other_profile = ProfileSerializer(other_profile)
+        
+        return Response({'Success': 'Followers and following successfully updated...', 'profile': other_profile.data }, status=status.HTTP_200_OK)
+
+class Unfollow(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def post(self, request, format=None):
+        data = self.request.data
+        other_user = User.objects.filter(username=data['username'])[0]
+        other_profile = UserProfile.objects.filter(user=other_user)[0]
+        
+        user = self.request.user
+        profile = UserProfile.objects.filter(user=user)[0]
+        
+        profile.following.remove(other_user)
+        other_profile.followers.remove(user)
+
+        profile = ProfileSerializer(profile)
+        other_profile = ProfileSerializer(other_profile)
+        
+        return Response({'Success': 'Followers and following successfully updated...', 'profile': other_profile.data}, status=status.HTTP_200_OK)
+
+class GetProfile(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def post(self, request, format=None):
+        data = self.request.data
+        username = data['user']
+        
+        user = User.objects.get(username=username)
+        profile = UserProfile.objects.get(user=user)
+        profile = ProfileSerializer(profile)
+        
+        return Response({'Success': 'Followers and following successfully recieved...', 'profile': profile.data}, status=status.HTTP_200_OK)

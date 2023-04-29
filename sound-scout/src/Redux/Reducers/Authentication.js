@@ -11,7 +11,8 @@ import {
 
 const initialState = {
     isAuthenticated: false,
-    authToken: ''
+    authToken: '',
+    username: ''
 };
 
 export default (state = initialState, action) => {
@@ -25,7 +26,8 @@ export default (state = initialState, action) => {
         case LOGIN_SUCCESS:
             return {
                 ...state,
-                isAuthenticated: true
+                isAuthenticated: true,
+                username: payload
             }
         case LOGOUT_SUCCESS:
             return {

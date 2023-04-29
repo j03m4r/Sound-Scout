@@ -21,7 +21,9 @@ import {
     DISCOVER_TRACKS_SUCCESS,
     DISCOVER_TRACKS_FAIL,
     GET_TRACK_LIKES_SUCCESS,
-    GET_TRACK_LIKES_FAIL
+    GET_TRACK_LIKES_FAIL,
+    GET_TRACK_LISTENERS_SUCCESS,
+    GET_TRACK_LISTENERS_FAIL
 } from '../Types/Spotify';
 import axios from 'axios';
 import * as AuthSession from 'expo-auth-session';
@@ -178,7 +180,6 @@ export const PlayTrack = (song_id) => async (dispatch, getState) => {
         });
     }
     dispatch(RepeatTrack());
-    dispatch(GetTrackLikes(song_id));
 };
 
 export const PauseTrack = () => async (dispatch, getState) => {
@@ -327,7 +328,7 @@ export const DiscoverTracks = (genre) => async (dispatch, getState) => {
     }
 };
 
-export const GetTrackLikes = (song_id) => async (dispatch, getState) => {
+export const GetTrackListeners = (song_id) => async (dispatch, getState) => {
     const { authToken } = getState().Authentication;
     const config = {
         headers: {
@@ -339,14 +340,14 @@ export const GetTrackLikes = (song_id) => async (dispatch, getState) => {
 
     const body = JSON.stringify({ song_id });
     try {
-        const response = await axios.post(`${API_URL}/spotify/get-track-likes`, body, config);
+        const response = await axios.post(`${API_URL}/spotify/get-track-listeners`, body, config);
         dispatch({
-            type: GET_TRACK_LIKES_SUCCESS,
+            type: GET_TRACK_LISTENERS_SUCCESS,
             payload: response.data
         });
     } catch {
         dispatch({
-            type: GET_TRACK_LIKES_FAIL,
+            type: GET_TRACK_LISTENERS_FAIL,
         });
     }
 };

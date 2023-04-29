@@ -14,6 +14,5 @@ urlpatterns = [
     path('get-current-track', GetCurrentTrack.as_view()),
     path('repeat-track', RepeatTrack.as_view()),
     path('like-track', LikeTrack.as_view()),
-    path('discover-tracks', GetDiscoveryTracks.as_view()),
-    path('get-track-likes', GetTrackLikes.as_view())
+    path('discover-tracks', GetDiscoveryTracks.as_view())
 ]

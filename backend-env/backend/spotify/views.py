@@ -53,7 +53,7 @@ class GetPersonalTopTracks(APIView):
         profile.top_tracks.clear()
         endpoint = 'me/top/tracks?time_range=short_term&limit=10'
         response = execute_spotify_api_request(user=request.user, endpoint=endpoint)
-        
+
         top_tracks = []
         for track in response.get('items'):
             name = track.get('name')
@@ -88,22 +88,34 @@ class GetPersonalTopTracks(APIView):
                                      duration=duration, song_id=song_id, track_number=track_number, album_uri=album_uri,
                                      popularity=popularity)
                 profile.top_tracks.add(new_track)
-                for genre in genres:
+                new_track.listeners.add(profile)
+            else:
+                new_track = Track.objects.get(song_id=song_id)
+                profile.top_tracks.add(new_track)
+                if profile not in new_track.listeners.all():
+                    new_track.listeners.add(profile)
+                    
+            for genre in genres:
                     genre_model = Genre.objects.filter(name=genre)
                     if not genre_model.exists():
                         genre = Genre.objects.create(name=genre)
                         new_track.genres.add(genre)
                     else:
                         new_track.genres.add(genre_model[0])
-            else:
-                profile.top_tracks.add(new_track[0])
-                for genre in genres:
-                    genre_model = Genre.objects.filter(name=genre)
-                    if not genre_model.exists():
-                        genre = Genre.objects.create(name=genre)
-                        new_track[0].genres.add(genre)
-                    else:
-                        new_track[0].genres.add(genre_model[0])
+            listeners = new_track.listeners.all()
+            listeners = ListenerSerializer(listeners, many=True).data
+            top_tracks[-1]['listeners'] = listeners
+
+            likes = new_track.likes
+            likes = LikeSerializer(likes, many=True).data
+            top_tracks[-1]['likes'] = likes
+            
+        endpoint = 'me'
+        response = execute_spotify_api_request(user=request.user, endpoint=endpoint)
+        if response.get('images'):
+            image_url = response.get('images')[0].get('url')
+            profile.image_url = image_url
+            profile.save(update_fields=['image_url'])
                 
         return Response({'Success': 'Top tracks successfully accessed.', 'tracks': top_tracks}, status=status.HTTP_200_OK)
     
@@ -180,15 +192,6 @@ class LikeTrack(APIView):
         
         likes = LikeSerializer(track.likes, many=True)
         return Response({'Success': 'Track successfully liked', 'likes': likes.data}, status=status.HTTP_200_OK)
-
-class GetTrackLikes(APIView):
-    permission_classes = (permissions.IsAuthenticated,)
-    def post(self, request, format=None):
-        song_id = request.data['song_id']
-        track = Track.objects.get(song_id=song_id)
-
-        likes = LikeSerializer(track.likes, many=True)
-        return Response({'likes': likes.data}, status=status.HTTP_200_OK)
 
 class GetGenres(APIView):
     permission_classes = (permissions.AllowAny,)

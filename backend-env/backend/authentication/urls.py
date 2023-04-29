@@ -10,5 +10,8 @@ urlpatterns = [
     path('is-authenticated', IsAuthenticated.as_view()),
     path('register', Register.as_view()),
     path('login', Login.as_view()),
-    path('logout', Logout.as_view())
+    path('logout', Logout.as_view()),
+    path('follow', Follow.as_view()),
+    path('unfollow', Unfollow.as_view()),
+    path('profile', GetProfile.as_view())
 ]
