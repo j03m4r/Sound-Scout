@@ -6,11 +6,42 @@ import {
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOGOUT_SUCCESS,
-    LOGOUT_FAIL
+    LOGOUT_FAIL,
+    IS_AUTHENTICATED_SUCCESS,
+    IS_AUTHENTICATED_FAIL
 } from '../Types/Authentication';
 import axios from 'axios';
 import { CheckSpotifyAuthenticated } from './Spotify';
 import { API_URL } from '../ApiVariables';
+
+export const CheckAuthenticated = () => async dispatch => {
+    const config = {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    };
+
+    try {
+        const response = await axios.get(`${API_URL}/authentication/is-authenticated`, config);
+        console.log(response.data);
+        if (response.data.isAuthenticated===true) {
+            dispatch({
+                type: IS_AUTHENTICATED_SUCCESS,
+                payload: response.data
+            });
+            dispatch(CheckSpotifyAuthenticated());
+        } else {
+            dispatch({
+                type: IS_AUTHENTICATED_FAIL
+            });
+        }
+    } catch {
+        dispatch({
+            type: IS_AUTHENTICATED_FAIL
+        });
+    }
+};
 
 export const GetToken = (username, password) => async dispatch => {
     const config = {

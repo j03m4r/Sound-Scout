@@ -6,7 +6,7 @@ from requests import post
 from .credentials import *
 from .utils import *
 from .models import Track
-from authentication.models import UserProfile
+from authentication.models import UserProfile, LikingActivity
 from .serializers import *
 import json
 from django.db.models import Count
@@ -168,13 +168,13 @@ class RepeatTrack(APIView):
     def get(self, request, format=None):
         endpoint = 'me/player/repeat?state=track'
         execute_spotify_api_request(user=request.user, endpoint=endpoint, put_=True)
-        
         return Response({'Success': 'Track successfully set to repeat'}, status=status.HTTP_200_OK)
 
 class LikeTrack(APIView):
     permission_classes = (permissions.IsAuthenticated,)
     def post(self, request, format=None):
         like = Like.objects.filter(user=request.user)
+        profile = UserProfile.objects.get(user=request.user)
         if like.exists():
             like = like[0]
         else:
@@ -184,20 +184,38 @@ class LikeTrack(APIView):
         track = Track.objects.get(song_id=song_id)
         
         try:
+            profile.liked_tracks.add(track)
+        except:
+            pass
+        
+        try:
             track.likes.add(like)
-            track.save(update_fields=['likes'])
         except:
             likes = LikeSerializer(track.likes, many=True)
-            return Response({'Error': 'Track has already been liked by this user', 'likes': likes.data})
+            return Response({'Error': 'Track has already been liked by this user', 'likes': likes.data}, status=status.HTTP_400_BAD_REQUEST)
+
+        new_activity = LikingActivity.objects.create(user=request.user, track_name=track.name)
+        profile = UserProfile.objects.get(user=request.user)
+        if new_activity not in profile.recent_activity.all():
+            profile.recent_activity.add(new_activity)
+            if len(profile.recent_activity.all()) > 3:
+                profile.recent_activity.remove(profile.recent_activity.all()[0])
         
         likes = LikeSerializer(track.likes, many=True)
         return Response({'Success': 'Track successfully liked', 'likes': likes.data}, status=status.HTTP_200_OK)
+    
+class GetTrackLikes(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def post(self, request, format=None):
+        track = Track.objects.get(song_id=request.data['song_id'])
+        likes = LikeSerializer(track.likes, many=True)
+        return Response({'Success': 'Track likes successfully returned', 'likes': likes.data}, status=status.HTTP_200_OK)
 
 class GetGenres(APIView):
     permission_classes = (permissions.AllowAny,)
     def get(self, request, format=None):
-        genres = Genre.objects.all().annotate(num_tracks = Count('track')).order_by('-num_tracks')
-        # genres = Genre.objects.order_by('?')[:25]
+        genres = Genre.objects.all().order_by('name')
+        # genres = Genre.objects.all().annotate(num_tracks = Count('track')).order_by('-num_tracks')
         genres = GenreSerializer(genres, many=True)
         return Response({'genres': genres.data}, status=status.HTTP_200_OK)
     
@@ -205,8 +223,8 @@ class GetDiscoveryTracks(APIView):
     permission_classes = (permissions.IsAuthenticated,)
     def post(self, request, format=None):
         genre = request.data['genre']
-        if genre == '':
-            tracks = Track.objects.all().order_by('?')[0:20]
+        if genre == 'Random':
+            tracks = Track.objects.all().order_by('?')
         else:
             genre = Genre.objects.get(name=genre)
             tracks = genre.track_set.all().order_by('-likes')

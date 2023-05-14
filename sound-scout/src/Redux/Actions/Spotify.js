@@ -20,8 +20,6 @@ import {
     LIKE_TRACK_FAIL,
     DISCOVER_TRACKS_SUCCESS,
     DISCOVER_TRACKS_FAIL,
-    GET_TRACK_LIKES_SUCCESS,
-    GET_TRACK_LIKES_FAIL,
     GET_TRACK_LISTENERS_SUCCESS,
     GET_TRACK_LISTENERS_FAIL
 } from '../Types/Spotify';
@@ -182,6 +180,32 @@ export const PlayTrack = (song_id) => async (dispatch, getState) => {
     dispatch(RepeatTrack());
 };
 
+export const ContinueTrack = () => async (dispatch, getState) => {
+    const { authToken } = getState().Authentication; 
+    const config = {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Token ${authToken}`
+        }
+    };
+
+    const body = JSON.stringify({ song_id: '' });
+    try {
+        const response = await axios.post(`${API_URL}/spotify/play-track`, body, config);
+        dispatch({
+            type: PLAY_SUCCESS,
+            payload: response.data
+        });
+    } catch {
+        dispatch({
+            type: PLAY_FAIL,
+            payload: false
+        });
+    }
+    dispatch(RepeatTrack());
+};
+
 export const PauseTrack = () => async (dispatch, getState) => {
     const { authToken } = getState().Authentication;
     var myHeaders = new Headers();
@@ -268,7 +292,7 @@ export const GetGenres = () => async dispatch => {
 
     try {
         const response = await axios.get(`${API_URL}/spotify/genres`, config);
-        const genres = response.data.genres.map((genre) => Object.assign(genre, {key: genre.id, value: genre.name}));
+        const genres = response.data.genres.map((genre) => Object.assign(genre, {key: genre.id, value: genre.name.charAt(0).toUpperCase() + genre.name.slice(1)}));
         dispatch({
             type: GET_GENRES_SUCCESS,
             payload: genres
@@ -293,6 +317,30 @@ export const LikeTrack = (song_id) => async (dispatch, getState) => {
     const body = JSON.stringify({ song_id });
     try {
         const response = await axios.post(`${API_URL}/spotify/like-track`, body, config);
+        dispatch({
+            type: LIKE_TRACK_SUCCESS,
+            payload: response.data
+        });
+    } catch {
+        dispatch({
+            type: LIKE_TRACK_FAIL,
+        });
+    }
+};
+
+export const GetTrackLikes = (song_id) => async (dispatch, getState) => {
+    const { authToken } = getState().Authentication;
+    const config = {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Token ${authToken}`
+        }
+    };
+
+    const body = JSON.stringify({ song_id });
+    try {
+        const response = await axios.post(`${API_URL}/spotify/get-track-likes`, body, config);
         dispatch({
             type: LIKE_TRACK_SUCCESS,
             payload: response.data

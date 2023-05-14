@@ -12732,3 +12732,2591 @@ Unauthorized: /spotify/get-personal-tracks
 <Response [200]>
 <Response [200]>
 <Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Internal Server Error: /authentication/profile
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 118, in post
+    if self.request.user in profile.followers.all():
+                            ^^^^^^^^^^^^^^^^^
+AttributeError: 'ProfileSerializer' object has no attribute 'followers'
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Bad Request: /authentication/get-auth-token
+Unauthorized: /authentication/login
+Unauthorized: /spotify/is-authenticated
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Internal Server Error: /authentication/follow
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 103, in post
+    profile.save(update_fields=['following', 'followers', 'recent_activity'])
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 795, in save
+    raise ValueError(
+ValueError: The following fields do not exist in this model, are m2m fields, or are non-concrete fields: following, followers, recent_activity
+Internal Server Error: /authentication/follow
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: authentication_followingactivity.user_1_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 97, in post
+    new_activity = FollowingActivity.objects.create(user_1=user, user_2=other_user)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/models.py", line 17, in save
+    super().save(*args, **kwargs)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/polymorphic/models.py", line 87, in save
+    return super().save(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: authentication_followingactivity.user_1_id
+Internal Server Error: /authentication/follow
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: authentication_followingactivity.user_1_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 97, in post
+    new_activity = FollowingActivity.objects.create(user_1=user, user_2=other_user)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/models.py", line 17, in save
+    super().save(*args, **kwargs)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/polymorphic/models.py", line 87, in save
+    return super().save(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: authentication_followingactivity.user_1_id
+Internal Server Error: /authentication/follow
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: authentication_followingactivity.user_1_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 97, in post
+    new_activity = FollowingActivity.objects.create(user_1=user, user_2=other_user)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/models.py", line 17, in save
+    super().save(*args, **kwargs)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/polymorphic/models.py", line 87, in save
+    return super().save(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: authentication_followingactivity.user_1_id
+Internal Server Error: /authentication/follow
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _commit
+    return self.connection.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: FOREIGN KEY constraint failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 101, in post
+    profile.recent_activity.add(new_activity)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 1086, in add
+    with transaction.atomic(using=db, savepoint=False):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/transaction.py", line 262, in __exit__
+    connection.commit()
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in commit
+    self._commit()
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 305, in _commit
+    with self.wrap_database_errors:
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _commit
+    return self.connection.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: FOREIGN KEY constraint failed
+Method Not Allowed: /spotify/discover-tracks
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Internal Server Error: /authentication/get-profiles
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _commit
+    return self.connection.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: FOREIGN KEY constraint failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 69, in get
+    Activity.objects.all().delete()
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1133, in delete
+    deleted, _rows_count = collector.delete()
+                           ^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/deletion.py", line 454, in delete
+    with transaction.atomic(using=self.using, savepoint=False):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/transaction.py", line 262, in __exit__
+    connection.commit()
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in commit
+    self._commit()
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 305, in _commit
+    with self.wrap_database_errors:
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _commit
+    return self.connection.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: FOREIGN KEY constraint failed
+Internal Server Error: /authentication/get-profiles
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _commit
+    return self.connection.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: FOREIGN KEY constraint failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 69, in get
+    Activity.objects.all().delete()
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1133, in delete
+    deleted, _rows_count = collector.delete()
+                           ^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/deletion.py", line 454, in delete
+    with transaction.atomic(using=self.using, savepoint=False):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/transaction.py", line 262, in __exit__
+    connection.commit()
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in commit
+    self._commit()
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 305, in _commit
+    with self.wrap_database_errors:
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _commit
+    return self.connection.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: FOREIGN KEY constraint failed
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Bad Request: /authentication/get-auth-token
+Unauthorized: /authentication/login
+Unauthorized: /spotify/is-authenticated
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Internal Server Error: /authentication/get-profiles
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 80, in get
+    return Response({'profiles': profiles.data}, status=status.HTTP_200_OK)
+                                 ^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_polymorphic/serializers.py", line 60, in to_representation
+    ret = serializer.to_representation(instance)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'receiver' was declared on serializer TextMessageSerializer, but has not been included in the 'fields' option.
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Internal Server Error: /authentication/send-message
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 163, in post
+    content = data['song_id']
+              ~~~~^^^^^^^^^^^
+KeyError: 'song_id'
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Unauthorized: /authentication/get-conversations
+Unauthorized: /authentication/get-conversations
+Unauthorized: /authentication/get-conversations
+Unauthorized: /authentication/get-conversations
+Unauthorized: /authentication/get-conversations
+Unauthorized: /authentication/get-conversations
+Unauthorized: /authentication/get-conversations
+Unauthorized: /authentication/get-conversation
+Unauthorized: /authentication/get-conversation
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Internal Server Error: /authentication/get-profiles
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 69, in get
+    TextMessage.objects.all()[-10:-1].delete()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 425, in __getitem__
+    raise ValueError("Negative indexing is not supported.")
+ValueError: Negative indexing is not supported.
+Internal Server Error: /authentication/get-profiles
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 69, in get
+    TextMessage.objects.all()[2:].delete()
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1113, in delete
+    raise TypeError("Cannot use 'limit' or 'offset' with delete().")
+TypeError: Cannot use 'limit' or 'offset' with delete().
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Internal Server Error: /authentication/get-profiles
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 73, in get
+    message = TrackMessage.objects.create(Track.objects.get(song_id='404r5PaCnSAgwsc82Lmy8j'), sender=User.objects.get(username='joemar'), receiver=User.objects.get(username='mara'))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: QuerySet.create() takes 1 positional argument but 2 were given
+Internal Server Error: /authentication/get-profiles
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 76, in get
+    return Response({'profiles': profiles.data}, status=status.HTTP_200_OK)
+                                 ^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_polymorphic/serializers.py", line 60, in to_representation
+    ret = serializer.to_representation(instance)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `image_url` is not valid for model `Track`.
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [404]>
+<Response [404]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [404]>
+<Response [404]>
+<Response [204]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [404]>
+<Response [404]>
+<Response [204]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [404]>
+<Response [404]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [404]>
+<Response [404]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [403]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [401]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [404]>
+<Response [404]>
+<Response [404]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Unauthorized: /authentication/login
+Unauthorized: /authentication/login
+Unauthorized: /spotify/is-authenticated
+Unauthorized: /spotify/is-authenticated
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Internal Server Error: /authentication/send-message
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 170, in post
+    content = data['song_id']
+              ~~~~^^^^^^^^^^^
+KeyError: 'song_id'
+Internal Server Error: /authentication/send-message
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 170, in post
+    content = data['song_id']
+              ~~~~^^^^^^^^^^^
+KeyError: 'song_id'
+Internal Server Error: /authentication/send-message
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 170, in post
+    content = data['song_id']
+              ~~~~^^^^^^^^^^^
+KeyError: 'song_id'
+Internal Server Error: /authentication/send-message
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 170, in post
+    content = data['song_id']
+              ~~~~^^^^^^^^^^^
+KeyError: 'song_id'
+Internal Server Error: /authentication/send-message
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 170, in post
+    content = data['song_id']
+              ~~~~^^^^^^^^^^^
+KeyError: 'song_id'
+Internal Server Error: /authentication/send-message
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 170, in post
+    content = data['song_id']
+              ~~~~^^^^^^^^^^^
+KeyError: 'song_id'
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [204]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [204]>
+<Response [204]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [204]>
+<Response [204]>
+Internal Server Error: /authentication/profile
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 153, in post
+    followage_instance = SocialInstance.objects.get(user=self.request.user)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+authentication.models.SocialInstance.DoesNotExist: SocialInstance matching query does not exist.
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+Internal Server Error: /authentication/profile
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 153, in post
+    followage_instance = SocialInstance.objects.get(user=self.request.user)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+authentication.models.SocialInstance.DoesNotExist: SocialInstance matching query does not exist.
+Internal Server Error: /authentication/profile
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 153, in post
+    followage_instance = SocialInstance.objects.get(user=self.request.user)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+authentication.models.SocialInstance.DoesNotExist: SocialInstance matching query does not exist.
+Internal Server Error: /authentication/profile
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 153, in post
+    followage_instance = SocialInstance.objects.get(user=self.request.user)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+authentication.models.SocialInstance.DoesNotExist: SocialInstance matching query does not exist.
+Internal Server Error: /authentication/profile
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 153, in post
+    followage_instance = SocialInstance.objects.get(user=self.request.user)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+authentication.models.SocialInstance.DoesNotExist: SocialInstance matching query does not exist.
+Internal Server Error: /authentication/profile
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 153, in post
+    followage_instance = SocialInstance.objects.get(user=self.request.user)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+authentication.models.SocialInstance.DoesNotExist: SocialInstance matching query does not exist.
+Internal Server Error: /spotify/discover-tracks
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/spotify/views.py", line 229, in post
+    genre = Genre.objects.get(name=genre)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+spotify.models.Genre.DoesNotExist: Genre matching query does not exist.
+Internal Server Error: /authentication/profile
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 153, in post
+    followage_instance = SocialInstance.objects.get(user=self.request.user)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+authentication.models.SocialInstance.DoesNotExist: SocialInstance matching query does not exist.
+Internal Server Error: /authentication/profile
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 153, in post
+    followage_instance = SocialInstance.objects.get(user=self.request.user)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+authentication.models.SocialInstance.DoesNotExist: SocialInstance matching query does not exist.
+<Response [204]>
+<Response [204]>
+Method Not Allowed: /authentication/is-authenticated
+Internal Server Error: /authentication/is-authenticated
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/contrib/auth/models.py", line 437, in __int__
+    raise TypeError(
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 15, in get
+    if UserProfile.objects.filter(user=self.request.user).exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x10ff001d0>.
+Internal Server Error: /authentication/is-authenticated
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/contrib/auth/models.py", line 437, in __int__
+    raise TypeError(
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 15, in get
+    if UserProfile.objects.filter(user=self.request.user).exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x108e2ac50>.
+Internal Server Error: /authentication/is-authenticated
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/contrib/auth/models.py", line 437, in __int__
+    raise TypeError(
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 15, in get
+    if UserProfile.objects.filter(user=self.request.user).exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x103612c90>.
+Internal Server Error: /authentication/is-authenticated
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/contrib/auth/models.py", line 437, in __int__
+    raise TypeError(
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/backend/authentication/views.py", line 15, in get
+    if UserProfile.objects.filter(user=self.request.user).exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joeymarkley/Documents/Visual Studio Code/Mobile Development/SoundScout/backend-env/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x10d5d63d0>.
+None
+None
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>
+<Response [200]>

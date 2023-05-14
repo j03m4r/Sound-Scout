@@ -41,3 +41,7 @@ class TrackSerializer(serializers.ModelSerializer):
         model = Track
         fields = '__all__'
 
+class LimitedTrackSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Track
+        fields = ('name', 'artist', 'album', 'song_id', 'img_url')

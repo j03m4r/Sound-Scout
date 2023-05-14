@@ -26,5 +26,5 @@ class Track(models.Model):
     track_number = models.IntegerField(default=0)
     genres = models.ManyToManyField(Genre)
     popularity = models.IntegerField(default=0)
-    likes = models.ManyToManyField(Like)
+    likes = models.ManyToManyField(Like, related_name='liked_tracks')
     listeners = models.ManyToManyField(to='authentication.UserProfile', related_name='listened_to_tracks')

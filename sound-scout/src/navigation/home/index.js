@@ -3,13 +3,10 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { Feather } from '@expo/vector-icons';
 import Feed from '../../screens/feed';
 import Profile from '../../screens/network/ProfileScreen';
-import { useSelector } from 'react-redux';
 
 const Tab = createMaterialBottomTabNavigator();
 
 export default function Home() {
-    const { username } = useSelector((state) => state.Authentication);
-
     return (
         <Tab.Navigator 
             barStyle={{ backgroundColor: 'black' }}
@@ -20,7 +17,7 @@ export default function Home() {
                     <Feather name="home" size={24} color={color} />
                 ),
             }} />
-            <Tab.Screen name="profile" initialParams={{username: username}} component={Profile} options={{
+            <Tab.Screen name="profile" component={Profile} options={{
                 tabBarIcon: ({color}) => (
                     <Feather name="user" size={24} color={color} />
                 ),

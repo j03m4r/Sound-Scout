@@ -10,10 +10,11 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     songDiscContainer: {
+        alignSelf: 'flex-start',
         display: 'flex', 
         alignItems: 'flex-start', 
         justifyContent: 'space-around', 
-        marginTop: 10
+        marginTop: 10,
     },
     subContainer: {
         alignSelf: 'flex-start',

@@ -7,6 +7,8 @@ import LoginScreen from '../screens/registration/LoginScreen';
 import RegisterScreen from '../screens/registration/RegisterScreen';
 import ProfileListScreen from '../screens/network/ProfileListScreen';
 import OtherProfileScreen from '../screens/network/OtherProfileScreen';
+import ConversationScreen from '../screens/network/ConversationScreen';
+import TrackBrowseScreen from '../screens/network/TrackBrowseScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,8 +20,17 @@ function Route() {
       {isAuthenticated ? 
         <Stack.Navigator initialRouteName="home">
             <Stack.Screen name="home" component={Home} options={{ headerShown: false }} />
-            <Stack.Screen name="list" component={ProfileListScreen} options={{ headerShown: false }} />
-            <Stack.Screen name="otherProfile" component={OtherProfileScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="listeners" component={ProfileListScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="otherProfile" component={OtherProfileScreen} options={{ headerShown: false }}
+            getId={({ params }) => params.username} />
+            <Stack.Screen name='following' component={ProfileListScreen} options={{ headerShown: false }}
+            getId={({ params }) => params.username} />
+            <Stack.Screen name='followers' component={ProfileListScreen} options={{ headerShown: false }}
+            getId={({ params }) => params.username} />
+            <Stack.Screen name='select-friends' component={ProfileListScreen} options={{ headerShown: false }} />
+            <Stack.Screen name='conversations' component={ProfileListScreen} options={{ headerShown: false }} />
+            <Stack.Screen name='conversation' component={ConversationScreen} options={{ headerShown: false }} />
+            <Stack.Screen name='track-browse' component={TrackBrowseScreen} options={{ headerShown: false}} />
         </Stack.Navigator>
         :
         <Stack.Navigator initialRouteName="login">

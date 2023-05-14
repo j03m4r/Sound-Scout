@@ -24,6 +24,8 @@
     "jscookie": "^1.1.0",
     "react": "18.1.0",
     "react-native": "0.70.8",
+    "react-native-chatty": "^0.4.3",
+    "react-native-context-menu-view": "^1.9.1",
     "react-native-dropdown-select-list": "^2.0.4",
     "react-native-form-component": "^2.6.8",
     "react-native-gesture-handler": "~2.8.0",
@@ -41,7 +43,8 @@
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
     "rn-swipe-gestures": "^1.0.3",
-    "rn-vertical-slider": "^3.1.0"
+    "rn-vertical-slider": "^3.1.0",
+    "stream-chat-react-native": "^5.14.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

@@ -6,7 +6,8 @@ import {
     LOGOUT_SUCCESS,
     LOGOUT_FAIL,
     LOGIN_SUCCESS,
-    LOGIN_FAIL
+    LOGIN_FAIL,
+    IS_AUTHENTICATED_SUCCESS
 } from '../Types/Authentication';
 
 const initialState = {
@@ -18,6 +19,13 @@ const initialState = {
 export default (state = initialState, action) => {
     const { type, payload } = action;
     switch (type) {
+        case IS_AUTHENTICATED_SUCCESS:
+            return {
+                ...state,
+                authToken: payload.token,
+                username: payload.username,
+                isAuthenticated: true
+            }
         case TOKEN_SUCCESS:
             return {
                 ...state,

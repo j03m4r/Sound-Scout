@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', '10.131.126.100', '10.132.129.219', '10.131.230.200', '10.128.134.43', '10.132.44.26',
                  '10.128.207.42', '10.131.24.7', '192.168.0.122', '10.132.15.209', '10.131.98.213', '10.132.150.77',
                  '10.131.48.3', '10.131.53.128', '172.20.100.153', '172.20.10.2', '10.131.193.211', '10.131.19.160',
-                 '10.131.19.160', '192.168.7.28']
+                 '10.131.19.160', '192.168.7.28', '10.131.148.42']
 
 
 # Application definition
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'polymorphic',
+    'rest_polymorphic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,24 +1,33 @@
-import React, { useEffect } from "react";
-import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from "react-native";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import React, { useEffect, useState } from "react";
+import { Text, View, SafeAreaView, Image, ScrollView, TouchableOpacity } from "react-native";
+import { MaterialIcons } from "@expo/vector-icons";
 import { useDispatch, useSelector } from 'react-redux';
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, Easing } from 'react-native-reanimated';
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { useState } from "react";
 import { GetProfile } from "../../Redux/Actions/Profile";
+import styles from './styles';
+import { useNavigation } from "@react-navigation/native";
 
 const defaultPic = "../../../assets/profile-pic.jpg";
 
-export default function App({ route }) {
+export default function App() {
     const { topTracks } = useSelector((state) => state.Spotify);
-    const { following, followers, profilePic } = useSelector((state) => state.Profile);
+    const { following, followers, profilePic, recentActivity } = useSelector((state) => state.Profile);
     const { username } = useSelector((state) => state.Authentication);
     const [rotated, setRotated] = useState(false);
     const rotationToDo = useSharedValue(0);
     const dispatch = useDispatch();
+    const navigation = useNavigation();
 
     useEffect(() => {
-        dispatch(GetProfile(route.params.username))
+        const subscribe = navigation.addListener('focus', () => {
+            dispatch(GetProfile(username))
+        });
+
+        return subscribe;
+    }, [navigation])
+
+    useEffect(() => {
+        dispatch(GetProfile(username))
     }, []);
 
     const animatedStyles = useAnimatedStyle(() => {
@@ -28,18 +37,11 @@ export default function App({ route }) {
     });
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={styles.container1}>
             <ScrollView showsVerticalScrollIndicator={false}>
-                {route.params.username !== username ? 
-                    <View style={styles.titleBar}>
-                        <Ionicons name="ios-arrow-back" size={24} color="#52575D"></Ionicons>
-                    </View>
-                    :
-                    <View style={styles.personalDms}>
-                        <MaterialIcons name="chat" size={18} color="#DFD8C8"></MaterialIcons>
-                    </View>
-                }
-
+                <TouchableOpacity style={styles.personalDms} onPress={() => navigation.navigate('conversations', {mode: 'conversations', username: username})}>
+                    <MaterialIcons name="chat" size={25} color="#DFD8C8"></MaterialIcons>
+                </TouchableOpacity>
                 <View style={{ alignSelf: "center" }}>
                     <View style={styles.profileImage}>
                         {profilePic ? 
@@ -48,50 +50,40 @@ export default function App({ route }) {
                             <Image source={require(defaultPic)} style={styles.image}></Image>
                         }
                     </View>
-                    {route.params.username !== username ?
-                        <View>
-                            <View style={styles.dm}>
-                                <MaterialIcons name="chat" size={18} color="#DFD8C8"></MaterialIcons>
-                            </View>
-                            <View style={styles.active}></View>
-                            <TouchableOpacity style={styles.add}>
-                                <Ionicons name="ios-add" size={48} color="#DFD8C8" style={{ marginTop: 6, marginLeft: 2 }}></Ionicons>
-                            </TouchableOpacity>
-                        </View>
-                        :
-                        <View></View>
-                    }
-                    
                 </View>
 
                 <View style={styles.infoContainer}>
-                    <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>{route.params.username}</Text>
+                    <Text style={[styles.text, { fontWeight: "bold", fontSize: 36 }]}>{username}</Text>
                     {/* <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Clairo&#39;s first male stan</Text> */}
                 </View>
 
                 <View style={styles.statsContainer}>
                     <View style={styles.statsBox}>
-                        <Text style={[styles.text, { fontSize: 24 }]}>3</Text>
+                        {recentActivity ?  // change this so that it reflects how many of your songs have been liked
+                            <Text style={[styles.text, { fontSize: 24 }]}>{recentActivity.length}</Text>
+                        :
+                            <Text style={[styles.text, { fontSize: 24 }]}>0</Text>
+                        }
                         <Text style={[styles.text, styles.subText]}>spotlights</Text>
                     </View>
-                    <View style={[styles.statsBox, { borderColor: "#DFD8C8", borderLeftWidth: 1, borderRightWidth: 1 }]}>
+                    <TouchableOpacity style={[styles.statsBox, { borderColor: "#DFD8C8", borderLeftWidth: 1, borderRightWidth: 1 }]} onPress={() => navigation.navigate('followers', {mode: 'followers', username: username})}>
                         {followers ? 
                         <Text style={[styles.text, { fontSize: 24 }]}>{followers.length}</Text>
                         :
                         <Text style={[styles.text, { fontSize: 24 }]}>0</Text>
                         }
                         <Text style={[styles.text, styles.subText]}>Followers</Text>
-                    </View>
-                    <View style={styles.statsBox}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.statsBox} onPress={() => navigation.navigate('following', {mode: 'following', username: username})}>
                         {following ? 
                         <Text style={[styles.text, { fontSize: 24 }]}>{following.length}</Text>
                         :
                         <Text style={[styles.text, { fontSize: 24 }]}>0</Text>
                         }
                         <Text style={[styles.text, styles.subText]}>Following</Text>
-                    </View>
+                    </TouchableOpacity>
+                    
                 </View>
-
                 <View style={{ marginTop: 32 }}>
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{ padding: 10 }}>
                         { topTracks ? 
@@ -112,204 +104,37 @@ export default function App({ route }) {
                                     }>
                                     {rotated ? 
                                         <Animated.View style={[animatedStyles, styles.rotatedView, styles.songDiscContainer]}>
-                                            <Text style={[styles.text, styles.rotatedView]}>{track.name}</Text>
-                                            <Text style={[{ marginVertical: 5 }, styles.rotatedView]}>{track.artist}</Text>
+                                            <Text style={[styles.text, styles.rotatedView]} numberOfLines={2} adjustsFontSizeToFit={true}>{track.name}</Text>
+                                            <Text style={[{ marginVertical: 5 }, styles.rotatedView]} numberOfLines={2} adjustsFontSizeToFit={true}>{track.artist}</Text>
                                             <Text style={styles.rotatedView}>{track.album}</Text>
                                         </Animated.View>
                                     :
                                         <Animated.Image source={{ uri: track.img_url }} style={[styles.image, animatedStyles]} resizeMode="cover"/>
                                     }
-                                    
                                 </TouchableOpacity>
                             )
                         :
                             <View>
-                                <Text>No Tracks!</Text>
+                                <Text>Loading Tracks...</Text>
                             </View>
                         }
                     </ScrollView>
                 </View>
                 <Text style={[styles.subText, styles.recent]}>Recent Activity</Text>
                 <View style={{ alignItems: "center" }}>
-                    <View style={styles.recentItem}>
+                    {recentActivity.map((activity, index) => // for some reason recentActivity.reverse().map() kept reversing it as i flipped the tracks, so I switched the reversing method
+                    <View key={recentActivity[recentActivity.length - 1 - index].created_at} style={styles.recentItem}>
                         <View style={styles.activityIndicator}></View>
                         <View style={{ width: 250 }}>
                             <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>
-                                Started following <Text style={{ fontWeight: "400" }}>Joel Fitz. Markley</Text> and <Text style={{ fontWeight: "400" }}>Mo Bamba</Text>
+                                {recentActivity[recentActivity.length - 1 - index].content}
                             </Text>
                         </View>
                     </View>
-
-                    <View style={styles.recentItem}>
-                        <View style={styles.activityIndicator}></View>
-                        <View style={{ width: 250 }}>
-                            <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>
-                                Started following <Text style={{ fontWeight: "400" }}>Boy Pablo</Text>
-                            </Text>
-                        </View>
-                    </View>
+                    )
+                    }
                 </View>
             </ScrollView>
         </SafeAreaView>
     );
 }
-
-//https://wallpapers.com/images/featured/4co57dtwk64fb7lv.jpg
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#FFF"
-    },
-    text: {
-        fontFamily: "HelveticaNeue",
-        color: "#52575D"
-    },
-    image: {
-        flex: 1,
-        height: undefined,
-        width: undefined,
-        borderRadius: 12
-    },
-    titleBar: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        marginTop: 24,
-        marginHorizontal: 16
-    },
-    subText: {
-        fontSize: 12,
-        color: "#AEB5BC",
-        textTransform: "uppercase",
-        fontWeight: "500"
-    },
-    profileImage: {
-        width: 200,
-        height: 200,
-        borderRadius: 100,
-        overflow: "hidden"
-    },
-    dm: {
-        backgroundColor: "#41444B",
-        position: "absolute",
-        top: 20,
-        width: 40,
-        height: 40,
-        borderRadius: 20,
-        alignItems: "center",
-        justifyContent: "center"
-    },
-    active: {
-        backgroundColor: "#34FFB9",
-        position: "absolute",
-        bottom: 28,
-        left: 10,
-        padding: 4,
-        height: 20,
-        width: 20,
-        borderRadius: 10
-    },
-    add: {
-        backgroundColor: "#41444B",
-        position: "absolute",
-        bottom: 0,
-        right: 0,
-        width: 60,
-        height: 60,
-        borderRadius: 30,
-        alignItems: "center",
-        justifyContent: "center"
-    },
-    infoContainer: {
-        alignSelf: "center",
-        alignItems: "center",
-        marginTop: 16
-    },
-    statsContainer: {
-        flexDirection: "row",
-        alignSelf: "center",
-        marginTop: 32
-    },
-    statsBox: {
-        alignItems: "center",
-        flex: 1
-    },
-    mediaImageContainer: {
-        width: 200,
-        height: 200,
-        borderRadius: 12,
-        overflow: "visible",
-        marginHorizontal: 20
-    },
-    mediaCount: {
-        backgroundColor: "#41444B",
-        position: "absolute",
-        top: "50%",
-        marginTop: -50,
-        marginLeft: 30,
-        width: 100,
-        height: 100,
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: 12,
-        shadowColor: "rgba(0, 0, 0, 0.38)",
-        shadowOffset: { width: 0, height: 10 },
-        shadowRadius: 20,
-        shadowOpacity: 1
-    },
-    recent: {
-        marginLeft: 78,
-        marginTop: 32,
-        marginBottom: 6,
-        fontSize: 10
-    },
-    recentItem: {
-        flexDirection: "row",
-        alignItems: "flex-start",
-        marginBottom: 16
-    },
-    activityIndicator: {
-        backgroundColor: "#CABFAB",
-        padding: 4,
-        height: 12,
-        width: 12,
-        borderRadius: 6,
-        marginTop: 3,
-        marginRight: 20
-    },
-    text: {
-        fontSize: 30,
-        fontWeight: 'bold'
-    },
-    songDiscContainer: {
-        display: 'flex', 
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#fff',
-        borderRadius: 12,
-        borderColor: 'black',
-        height: '100%'
-    },
-    rotatedView: {
-        transform: [{ rotateY: '180deg' }]
-    },
-    shadowProp: {
-        shadowColor: '#171717',
-        shadowOffset: {width: -2, height: 3},
-        shadowOpacity: 0.3,
-        shadowRadius: 4,
-    },
-    personalDms: {
-        alignSelf: 'flex-end',
-        flexDirection: "row",
-        justifyContent: "space-between",
-        marginVertical: 24,
-        marginHorizontal: 30,
-        backgroundColor: "#41444B",
-        width: 40,
-        height: 40,
-        borderRadius: 20,
-        alignItems: "center",
-        justifyContent: "center" 
-    }
-});

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import { SelectList } from 'react-native-dropdown-select-list';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,8 +9,13 @@ import { DiscoverTracks } from '../Redux/Actions/Spotify';
 export default function DiscoveryConfiguration({ scrollToTopCallback}) {
     const dispatch = useDispatch();
     const [genre, setGenre] = useState('');
+    const [_genres, setGenres] = useState([]);
     const [popularity, setPopularity] = useState(0);
     const { genres } = useSelector((state) => state.Spotify);
+
+    useEffect(() => {
+        setGenres([{ key: 2000, value: 'Random' }, ...genres]);
+    }, []);
 
     const onPress = () => {
         dispatch(DiscoverTracks(genre));
@@ -22,16 +27,17 @@ export default function DiscoveryConfiguration({ scrollToTopCallback}) {
         <SafeAreaView style={styles.safeAreaView}>
             <View style={styles.container}>
                 <View style={styles.selector}>
-                    <Text style={styles.genreText}>Genre of Discovery</Text>
                     <SelectList 
                         setSelected={(genre) => setGenre(genre)} 
-                        data={genres}
+                        data={_genres}
                         save="value"
                         label="Genres"
                         placeholder="Select Genre"
+                        placeholderStyle={styles.placeholderStyle}
                         boxStyles={{borderRadius:0}}
                         dropdownStyles={{borderRadius:0}}
                         searchicon={<View/>}
+                        inputStyles={{ color: 'black' }}
                         searchPlaceholder='Search Genres'
                     />
                 </View>

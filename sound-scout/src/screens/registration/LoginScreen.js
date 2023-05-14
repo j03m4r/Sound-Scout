@@ -1,8 +1,7 @@
+import React, { useState } from 'react'
 import { View, Text, TouchableOpacity, TextInput } from 'react-native'
-import React, { useEffect, useState } from 'react'
 import { GetToken } from '../../Redux/Actions/Authentication';
-import { GetSpotifyCode } from '../../Redux/Actions/Spotify';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import styles from './styles';
 import { Link } from '@react-navigation/native';
 
