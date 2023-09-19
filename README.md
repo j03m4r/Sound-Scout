@@ -10,7 +10,7 @@ Discover music people really listen to! React Native x Django application.
 * React Native / Expo Go frontend
 * Spotify API integration
 
-# !! Deployment is currently *unavailable* :( !!
+*Deployment is currently *unavailable* :(*
 
 ## Setup Locally
 
