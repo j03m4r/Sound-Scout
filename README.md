@@ -28,7 +28,7 @@ cd backend-env/ && source bin/activate
 ```bash
 pip3 install -r requirements.txt
 ```
-5. Start up Django API (see [run development server on local ip](https://docs.djangoproject.com/en/4.2/ref/django-admin/#django-admin-runserver) if using on physical mobile device to open application. *NOTE:* Must include local IP address in Django's accepted IPs and update frontend's API variables)
+5. Start up Django API (see [run development server on local ip](https://docs.djangoproject.com/en/4.2/ref/django-admin/#django-admin-runserver) if using on physical mobile device. *NOTE:* Must include local IP address in Django's accepted IPs and update frontend's API variables)
 ```bash
 cd backend/ && python3 manage.py runserver
 ```
