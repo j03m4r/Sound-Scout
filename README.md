@@ -1,7 +1,7 @@
 # Sound-Scout
 Discover music people really listen to! React Native x Django application.
 
-##Features##
+## Features
 * TikTok Adjacent interface
 * Profiles & Friends
 * Direct Messages (text & tracks)
@@ -10,13 +10,14 @@ Discover music people really listen to! React Native x Django application.
 * React Native / Expo Go frontend
 * Spotify API integration
 
-#!! Deployment is currently *unavailable* :( !!#
+#!! Deployment is currently *unavailable* :( !!
 
-##Setup Locally##
+## Setup Locally
 
-###Install###
+### Install
 ```git clone https://github.com/j03m4r/Sound-Scout.git```
-####Quickstart###
+
+#### Quickstart
 1. Navigate to the backend folder and activate virtual environment on one terminal
 ```cd backend-env/ && source bin/activate```
 2. Install requirements
