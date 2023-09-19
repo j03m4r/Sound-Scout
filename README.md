@@ -28,4 +28,4 @@ Discover music people really listen to! React Native x Django application.
 ```cd sound-scout/ && npm install```
 5. Start Expo Project
 ```npx expo start```
-6. Follow Expo Go's startup instructions to open the application
+6. Follow Expo Go's startup instructions in terminal to open the application
