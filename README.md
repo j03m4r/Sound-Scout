@@ -15,7 +15,9 @@ Discover music people really listen to! React Native x Django application.
 ## Setup Locally
 
 ### Install
-```git clone https://github.com/j03m4r/Sound-Scout.git```
+```bash
+git clone https://github.com/j03m4r/Sound-Scout.git
+```
 
 ### Quickstart
 1. Navigate to the backend folder and activate virtual environment on one terminal
