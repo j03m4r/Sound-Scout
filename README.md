@@ -1,6 +1,9 @@
 # Sound-Scout
 Discover music people really listen to! React Native x Django application.
 
+## Overview
+Sound Scout utilized React Native/Expo in conjunction with Django. The whole goal of Sound Scout was to manipulate popular music service APIs to create a streamlined method of discovering music. We wanted to create a familiar, TikTok adjacent interface and this was perhaps our most pronounced success. We focused on incorporating the Spotify API into the project due to it's ease of integration. Upon completion of a prototype we experimented with deployment using Zappa and AWS. 
+
 ## Features
 * TikTok Adjacent interface
 * Profiles & Friends
