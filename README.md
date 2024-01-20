@@ -43,4 +43,3 @@ cd sound-scout/ && npm install
 ```bash
 npx expo start
 ```
-11. Follow Expo Go's startup instructions in terminal to open the application
