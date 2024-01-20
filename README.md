@@ -13,8 +13,6 @@ Sound Scout utilized React Native/Expo in conjunction with Django. The whole goa
 * React Native / Expo Go frontend
 * Spotify API integration
 
-*Deployment is currently *unavailable* :(*
-
 ## Setup Locally
 
 ### Install
